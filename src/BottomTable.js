@@ -1,19 +1,25 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-var editor;
 
-export class Editor extends React.Component {
+export class BottomTable extends React.Component {
     constructor(props) {
         super(props);
-        var a = 'pidd'
-        editor = this;
         this.state = {
-            columns: 0,
-            rows: 0,
+            title: "",
+            probStatement:""
         }
     }
-
+    onTitleChange(event){
+        this.setState({
+            title:event.target.value
+        })
+    }
+    onProbStatementChange(event){
+        this.setState({
+            title:event.target.value
+        })
+    }
     render() {
         return (
             <React.Fragment>
@@ -21,11 +27,11 @@ export class Editor extends React.Component {
                     <form>
                         <h3 className={"centerText"}>Title</h3>
                         <div className={"centerInput"}>
-                            <input type="text" name="Title" className={"inputBoxLong"} placeholder={"Title"}/>
+                            <input type="text" name="Title" className={"inputBoxLong"} placeholder={"Title"} onChange={this.onTitleChange} value={this.state.title}/>
                         </div>
                         <br/>
                         <h3 className={"centerText"}>Problem Info</h3>
-                        <div className="graphicsSelector">
+                        <div className="graphicsSelectorBottom">
                             <div className="routerImage">
                                 <img src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg" />
                             </div>
@@ -65,16 +71,14 @@ export class Editor extends React.Component {
                         <div className={"centerInput"}>
                             <label className={"labelClass"}>Problem Statement</label>
                             <input type={"text"} name={"problemStatement"} className={"inputBoxLong"}
-                                   placeholder={"Problem Statement"}/>
+                                   placeholder={"Problem Statement"} onChange={this.onProbStatementChange} value={this.state.probStatement}/>
                         </div>
                         <label className={"centerText"}>Problem Solution</label>
                     </form>
-
-
                 </div>
             </React.Fragment>
         )
     };
 }
 
-export default Editor;
+export default BottomTable;

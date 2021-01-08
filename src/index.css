@@ -36,12 +36,20 @@ code {
     margin-left: 20px;
     min-width:40%;
     max-width: 50%;
-    height:200px;
-    border: 1px solid black;
+    height:auto;
+    padding-bottom: 20px;
+ }
+.labelClass{
+    width:100%;
+}
+.graphicsSelectorBottom{
+
 }
 .graphicsSelector{
     margin-left: 20px;
     width:90%;
+    min-height: 300px;
+    max-height:  500px;
  }
 .centerInput{
     width: 70%;
@@ -58,12 +66,13 @@ code {
     height: 200px;
     margin-right: 40px;
 }
-.l2Table{
+.TableDiv{
     min-width: 20%;
     height: auto;
     float:right;
     border: 1px solid black
 }
+
 .l2Header{
     border-bottom: 1px solid black;
 }
