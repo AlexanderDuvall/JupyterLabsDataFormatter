@@ -15,7 +15,7 @@ code {
 
 #root {
     width: 100%;
-     display: flex;
+    display: flex;
 }
 
 .inputBoxLong {
@@ -25,33 +25,48 @@ code {
     border-radius: 1000px;
     padding-left: 10px;
     font-size: 15px;
- }
+}
 
 .centerText {
-     margin-left: 20px;
+    margin-left: 20px;
 }
 
 .routerImage {
-    float: left;
-    margin-left: 20px;
-    min-width:40%;
-    max-width: 50%;
-    height:auto;
+     margin: auto;
+    min-width: 60%;
+    max-width: 80%;
+    height: auto;
     padding-bottom: 20px;
- }
-.labelClass{
-    width:100%;
 }
-.graphicsSelectorBottom{
 
+.routerImageBottom {
+    margin: auto;
+    min-width: 60%;
+    max-width: 80%;
+    height: auto;
+    padding-bottom: 20px;
 }
-.graphicsSelector{
+
+.labelClass {
+    width: 100%;
+}
+
+.graphicsSelectorBottom {
     margin-left: 20px;
-    width:90%;
+    width: 90%;
     min-height: 300px;
-    max-height:  500px;
- }
-.centerInput{
+    max-height: 500px;
+    display: Block;
+}
+.graphicsSelector {
+    margin-left: 20px;
+    width: 90%;
+    min-height: 300px;
+    max-height: 500px;
+    display: flex;
+}
+
+.centerInput {
     width: 70%;
     margin-left: 10px;
 }
@@ -66,16 +81,37 @@ code {
     height: 200px;
     margin-right: 40px;
 }
-.TableDiv{
+
+.TableDivBottom {
     min-width: 20%;
     height: auto;
-    float:right;
-    border: 1px solid black
+ }
+
+.TableDiv {
+    min-width: 20%;
+    height: auto;
 }
 
-.l2Header{
+.sideBySide {
+    width: 100%;
+    height: auto;
+    display: flex;
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.BottomLeft {
+    float: left;
+}
+
+.BottomRight {
+    margin-left: 100%;
+}
+
+.l2Header {
     border-bottom: 1px solid black;
 }
+
 #left {
     width: 20%;
     height: 500px;
@@ -85,4 +121,4 @@ code {
 #right {
     width: 70%;
     height: 100%;
- }
+}

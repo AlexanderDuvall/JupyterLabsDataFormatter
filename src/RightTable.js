@@ -35,7 +35,7 @@ export class RightTable extends React.Component {
                             <div className="routerImage">
                                 <img src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg" />
                             </div>
-                            <div className="TableDiv">
+                             <div className="TableDiv">
                                 <table className="table table-striped ">
                                     <thead>
                                     <tr>
@@ -68,6 +68,7 @@ export class RightTable extends React.Component {
                                 </table>
                             </div>
                         </div>
+
                         <div className={"centerInput"}>
                             <label className={"labelClass"}>Problem Statement</label>
                             <input type={"text"} name={"problemStatement"} className={"inputBoxLong"}

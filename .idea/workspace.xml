@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Initial Commit. Begun adding templates. None finished.">
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Table and image set for RightTable.js format. BottomTable.js started.">
       <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BottomTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RightTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BottomTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RightTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +88,8 @@
       <workItem from="1609962008465" duration="961000" />
       <workItem from="1610130147174" duration="231000" />
       <workItem from="1610130395188" duration="23000" />
-      <workItem from="1610130452115" duration="4255000" />
+      <workItem from="1610130452115" duration="9306000" />
+      <workItem from="1610154463219" duration="1745000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -97,15 +98,34 @@
       <option name="project" value="LOCAL" />
       <updated>1610130684678</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Table and image set for RightTable.js format. BottomTable.js started.">
+      <created>1610134839482</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610134839482</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit. Begun adding templates. None finished." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit. Begun adding templates. None finished." />
+    <MESSAGE value="Table and image set for RightTable.js format. BottomTable.js started." />
+    <option name="LAST_COMMIT_MESSAGE" value="Table and image set for RightTable.js format. BottomTable.js started." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
