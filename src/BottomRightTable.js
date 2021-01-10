@@ -136,8 +136,7 @@ export class BottomRightTable extends React.Component{
                             <label className={"labelClass"}>Problem Statement</label>
                             <input type={"text"} name={"problemStatement"} className={"inputBoxLong"}
                                    placeholder={"Problem Statement"} onChange={this.onProbStatementChange} value={this.state.probStatement}/>
-                        </div>
-                        <label className={"centerText"}>Problem Solution</label>
+                                               </div>
                     </form>
                 </div>
             </React.Fragment>

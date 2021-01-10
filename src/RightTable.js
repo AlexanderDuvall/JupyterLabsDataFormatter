@@ -74,10 +74,7 @@ export class RightTable extends React.Component {
                             <input type={"text"} name={"problemStatement"} className={"inputBoxLong"}
                                    placeholder={"Problem Statement"} onChange={this.onProbStatementChange} value={this.state.probStatement}/>
                         </div>
-                        <label className={"centerText"}>Problem Solution</label>
                     </form>
-
-
                 </div>
             </React.Fragment>
         )
