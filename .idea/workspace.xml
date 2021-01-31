@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added pop function on columns, can now add templates with LeftSelector.js, can select which template to use with dropdown menu.">
-      <change afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ImageOnly.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LeftSelector.js" afterDir="false" />
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added save function when moving to different templates. Does not update, just stores info in states.">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BottomTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContentEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RightTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeftSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeftSelector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problemSolution.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/problemSolution.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +88,13 @@
       <workItem from="1610130452115" duration="9306000" />
       <workItem from="1610154463219" duration="2605000" />
       <workItem from="1610207226979" duration="6263000" />
-      <workItem from="1610302902956" duration="14624000" />
+      <workItem from="1610302902956" duration="14688000" />
+      <workItem from="1610391797293" duration="1106000" />
+      <workItem from="1611255193615" duration="663000" />
+      <workItem from="1612033419578" duration="13151000" />
+      <workItem from="1612054465987" duration="927000" />
+      <workItem from="1612060047726" duration="1103000" />
+      <workItem from="1612061805602" duration="861000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -115,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610156270070</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added pop function on columns, can now add templates with LeftSelector.js, can select which template to use with dropdown menu.">
+      <created>1610317653709</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610317653709</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +147,8 @@
     <MESSAGE value="Table and image set for RightTable.js format. BottomTable.js started." />
     <MESSAGE value="BottomTable.js, BottomRightTable.js, and RightTable.js Correctly formatted." />
     <MESSAGE value="Added pop function on columns, can now add templates with LeftSelector.js, can select which template to use with dropdown menu." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added pop function on columns, can now add templates with LeftSelector.js, can select which template to use with dropdown menu." />
+    <MESSAGE value="Added save function when moving to different templates. Does not update, just stores info in states." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added save function when moving to different templates. Does not update, just stores info in states." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

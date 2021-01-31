@@ -6,16 +6,27 @@ import BottomRightTable from "./BottomRightTable";
 import ContentEditor from "./ContentEditor";
 import ImageOnly from "./ImageOnly";
 
+
+//TODO Add functions to select what tables will be shown, and choose what to display.
+//TODO Add template without image.
+//TODO
 export class Editor extends React.Component {
     constructor(props) {
         super(props);
+        let content = []
         this.state = {
-            columns: 0,
-            rows: 0,
-            template: <ImageOnly/>
+            template: <ImageOnly/>,
+            columnContent: content,
+            content: content
         }
+        this.saveData = this.saveData.bind(this);
         this.selectTemplateType = this.selectTemplateType.bind(this);
     }
+componentWillUnmount() {
+    let id = this.props.keyComm;
+    let hash = this.buildhash();
+    this.props.saveFinalData(id, hash);
+}
 
     selectTemplateType(event) {
         let a = event.target.value;
@@ -38,8 +49,28 @@ export class Editor extends React.Component {
         }
         this.defineTemplate();
         console.log("updating!!!");
+
     }
 
+
+
+    buildhash() {
+        let data = {
+            template: this.state.template,
+            columnContent: this.state.columnContent,
+            content: this.state.content
+        };
+        return data;
+    }
+
+    saveData(columnContent, content) {
+        console.log("asdfasdf");
+        this.setState({
+            columnContent: columnContent,
+            content: content
+        });
+
+    }
 
     Selector() {
         let element = <select className={"column"} name="cars" id="cars" onChange={this.selectTemplateType}>
@@ -52,7 +83,6 @@ export class Editor extends React.Component {
     }
 
     defineTemplate() {
-
         return this.state.template;
     }
 
@@ -61,7 +91,7 @@ export class Editor extends React.Component {
             <React.Fragment>
                 {this.Selector()}
                 {this.defineTemplate()}
-                <ContentEditor/>
+                <ContentEditor saveNewData={this.saveData}/>
             </React.Fragment>
         )
     };

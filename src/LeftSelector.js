@@ -6,17 +6,35 @@ class LeftSelector extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            templates: [<Editor key={1}/>],
-            templateId: [1]
+            templates: [],
+            templateId: []
         }
         this.goToView = this.goToView.bind(this);
         this.addTemplate = this.addTemplate.bind(this);
         this.goToView = this.goToView.bind(this);
+        this.saveParentDataFunction = this.saveParentDataFunction.bind(this);
+    }
+
+    componentWillUnmount() {
+        let id = this.props.keyComm;
+        let hash = this.buildhash();
+        this.props.saveFinalData(id, hash);
+    }
+
+    saveParentDataFunction(id, data) {
+        console.log(1);
+        let updatedTemplate = this.state.templates
+        console.log(2);
+        updatedTemplate[id - 1] = <Editor saveFinalData={this.saveParentDataFunction} key={id}/>
+        console.log(3);
+        this.setState({
+            templates: updatedTemplate
+        });
     }
 
     goToView(identifier) {
-        let template = this.state.templates[identifier-1];
-        ReactDOM.render(template,document.getElementById("right"));
+        let template = this.state.templates[identifier - 1];
+        ReactDOM.render(template, document.getElementById("right"));
     }
 
     renderViews() {
@@ -34,10 +52,9 @@ class LeftSelector extends React.Component {
     addTemplate(event) {
         let buttons = this.state.templateId;
         let templates = this.state.templates;
-        let len = buttons.length+1
+        let len = buttons.length + 1
         buttons.push(len);
-        //TODO: Add a save function so it doesn't lose template data. onChange in the class component may work.
-        templates.push(<Editor key={len}/>)
+        templates.push(<Editor saveFinalData={this.saveParentDataFunction} key={len}/>)
         this.setState({
             templateId: buttons,
             templates: templates

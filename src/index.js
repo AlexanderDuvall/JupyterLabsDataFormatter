@@ -57,10 +57,7 @@ function dynamic() {
        <LeftSelector/>,
         document.getElementById('left')
     );
-    ReactDOM.render(
-        <Editor/>,
-        document.getElementById("right")
-    )
+
 }
 
 function personInfo(person) {
