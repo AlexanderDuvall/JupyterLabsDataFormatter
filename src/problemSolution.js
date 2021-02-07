@@ -14,11 +14,6 @@ export class ProblemSolution extends React.Component {
         }
     }
 
-    /**
-     * TODO: Rewrite addRow with matrix to ensure it is dynamic without overwriting data.
-     * TODO: Get addTitle working with addRow.
-     */
-
     addRow(props) {
         let rowdata = [];
         let len = props.elementslength;

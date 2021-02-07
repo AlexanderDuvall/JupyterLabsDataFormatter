@@ -15,15 +15,52 @@ code {
 
 .Append {
     width: 70px;
-    height: 70px;
+    height: 10px;
+    background-color: transparent;
+    border: 0px;
 }
 
 .column {
     width: 120px;
     height: 40px;
     margin-left: 15px;
+    margin-top:5px;
+}
+.headerSelector{
+    margin-left: 12px;
+    width: 124px;
+    height: 33px;
+    margin-top: 11px;
 }
 
+.leftButtons {
+    width: 100%;
+    height: 30px;
+    font-size: 10px;
+}
+
+.problemButton {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 30px;
+    background-color: white;
+    border: 0px solid white;
+}
+.problemButton:hover{
+    background-color: lightblue;
+}
+
+.appendButton {
+    float: right;
+    width: 41px;
+    height: 41px;
+    border-radius: 10000px;
+    margin-left: 10px;
+    border: 1px solid white;
+    background-color: lightblue;
+}
 #root {
     width: 100%;
     display: flex;
@@ -70,6 +107,11 @@ code {
     display: Block;
 }
 
+.appendBar {
+    display: flex;
+    width: 100%;
+}
+
 .graphicsSelector {
     margin-left: 20px;
     width: 90%;
@@ -110,6 +152,7 @@ code {
 .TableDiv {
     min-width: 20%;
     height: auto;
+    margin-left: 31px;
 }
 
 .sideBySide {
@@ -131,14 +174,31 @@ code {
 .l2Header {
     border-bottom: 1px solid black;
 }
+td {
+    border: 1px solid #dddddd;
+    padding: 4px;
+    margin: auto;
+    font-size: 14px;
+}
+th{
+    border: 1px solid #dddddd;
+    padding-right: 13px;
+    padding-bottom: 13px;
+    margin: auto;
+}
 
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
 #left {
     width: 20%;
-    height: 500px;
-    background-color: crimson;
+    height: 1000px;
+    background-color: #ededed;
+    position: fixed;
 }
 
 #right {
     width: 70%;
     height: 100%;
+    margin-left: 22%;
 }

@@ -6,53 +6,65 @@ import BottomRightTable from "./BottomRightTable";
 import ContentEditor from "./ContentEditor";
 import ImageOnly from "./ImageOnly";
 
-
 //TODO Add functions to select what tables will be shown, and choose what to display.
 //TODO Add template without image.
 //TODO
 export class Editor extends React.Component {
     constructor(props) {
         super(props);
-        let content = []
+        let data = this.props.data
         this.state = {
-            template: <ImageOnly/>,
-            columnContent: content,
-            content: content
+            template: data.template,
+            columnContent: data.columnContent,
+            content: data.content
         }
         this.saveData = this.saveData.bind(this);
         this.selectTemplateType = this.selectTemplateType.bind(this);
     }
-componentWillUnmount() {
-    let id = this.props.keyComm;
-    let hash = this.buildhash();
-    this.props.saveFinalData(id, hash);
-}
+
+    componentDidMount() {
+        let data = this.props.data;
+        console.log(data.identifier+".........")
+    }
+
+    componentWillUnmount() {
+        let id = this.props.data.identifier;
+        let hash = this.buildhash();
+        console.log(hash);
+        this.props.saveFinalData(id, hash);
+    }
 
     selectTemplateType(event) {
+        let func = () => {
+            let id = this.props.data.identifier;
+            let hash = this.buildhash();
+            console.log(hash);
+            this.props.saveFinalData(id, hash);
+            console.log("updating!!! "+id+"...." + this.state.template.type.name);
+        }
         let a = event.target.value;
-        if (a === "L2-BR") {
+        if (a === "BottomRightTable") {
             this.setState({
                 template: <BottomRightTable/>
             })
-        } else if (a === "L2-B") {
+            func();
+        } else if (a === "BottomTable") {
             this.setState({
                 template: <BottomTable/>
             })
-        } else if (a === "L2-R") {
+            func();
+        } else if (a === "RightTable") {
             this.setState({
                 template: <RightTable/>
             })
-        } else {
+            func();
+        } else if (a === "ImageOnly") {
             this.setState({
                 template: <ImageOnly/>
             })
+            func();
         }
-        this.defineTemplate();
-        console.log("updating!!!");
-
     }
-
-
 
     buildhash() {
         let data = {
@@ -60,11 +72,12 @@ componentWillUnmount() {
             columnContent: this.state.columnContent,
             content: this.state.content
         };
+        console.log(data);
+        console.log("mhmmm")
         return data;
     }
 
     saveData(columnContent, content) {
-        console.log("asdfasdf");
         this.setState({
             columnContent: columnContent,
             content: content
@@ -72,25 +85,29 @@ componentWillUnmount() {
 
     }
 
-    Selector() {
-        let element = <select className={"column"} name="cars" id="cars" onChange={this.selectTemplateType}>
-            <option value="Image only">Image only</option>
-            <option value="L2-BR">L2-BR</option>
-            <option value="L2-B">L2-B</option>
-            <option value="L2-R">L2-R</option>
-        </select>;
-        return element;
+    selected(temp) {
+        console.log("comparing..." + this.state.template.type.name)
+        if (this.state.template.type.name === temp) {
+            return <option value={temp} selected>{temp}</option>
+        }
+        return <option value={temp}>{temp}</option>
     }
 
-    defineTemplate() {
-        return this.state.template;
+    Selector() {
+        let element = <select className={"column"} name="cars" id="cars" onChange={this.selectTemplateType}>
+            {this.selected("ImageOnly")}
+            {this.selected("BottomRightTable")}
+            {this.selected("BottomTable")}
+            {this.selected("RightTable")}
+        </select>;
+        return element;
     }
 
     render() {
         return (
             <React.Fragment>
                 {this.Selector()}
-                {this.defineTemplate()}
+                {this.state.template}
                 <ContentEditor saveNewData={this.saveData}/>
             </React.Fragment>
         )

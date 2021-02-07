@@ -30,6 +30,7 @@ componentWillUnmount() {
         if (compare === content) {
             return <option value={compare} selected>{compare}</option>
         }
+        return <option value={compare}>{compare}</option>
     }
     renderColumnContent() {
         let content = this.state.columnContent
@@ -46,6 +47,7 @@ componentWillUnmount() {
     }
 
     append(event) {
+        event.preventDefault();
         var a = this.state.columnContent;
         a.push(a.length + 1)
         this.setState({
@@ -55,6 +57,7 @@ componentWillUnmount() {
     }
 
     pop(event) {
+        event.preventDefault();
         var a = this.state.columnContent;
         a.pop();
         this.setState({
@@ -73,12 +76,12 @@ componentWillUnmount() {
                 <div className="problemSelector">
                     <button className="Append" onClick={() => this.append()}>
                         <img className={"imageButton"}
-                             src="https://pngimage.net/wp-content/uploads/2018/05/add-icon-png-black-3.png"
+                             src="add-circle-outline.svg"
                              alt="logo.svg"/>
                     </button>
                     <button className="Append" onClick={() => this.pop()}>
                         <img className={"imageButton"}
-                             src="https://img.icons8.com/cotton/452/minus-sign.png"
+                             src="remove-circle-outline.svg"
                              alt="logo.svg"/>
                     </button>
                     {this.renderColumnContent()}

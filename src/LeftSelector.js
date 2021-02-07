@@ -1,6 +1,7 @@
 import React from "react";
 import Editor from "./Editor";
 import ReactDOM from 'react-dom';
+import ImageOnly from "./ImageOnly";
 
 class LeftSelector extends React.Component {
     constructor(props) {
@@ -15,25 +16,21 @@ class LeftSelector extends React.Component {
         this.saveParentDataFunction = this.saveParentDataFunction.bind(this);
     }
 
-    componentWillUnmount() {
-        let id = this.props.keyComm;
-        let hash = this.buildhash();
-        this.props.saveFinalData(id, hash);
-    }
-
+//TODO They will have a pool to choose from data btw. So make drop down boxes include that
+// TODO Everything will be given from db;
     saveParentDataFunction(id, data) {
-        console.log(1);
         let updatedTemplate = this.state.templates
-        console.log(2);
-        updatedTemplate[id - 1] = <Editor saveFinalData={this.saveParentDataFunction} key={id}/>
-        console.log(3);
+        data["identifier"] = id;
+        updatedTemplate[id - 1] = <Editor saveFinalData={this.saveParentDataFunction} data={data}/>
         this.setState({
             templates: updatedTemplate
         });
+        console.log("uptop...." + id + "...." + data.template.type.name);
     }
 
     goToView(identifier) {
         let template = this.state.templates[identifier - 1];
+        console.log("rendering " + identifier);
         ReactDOM.render(template, document.getElementById("right"));
     }
 
@@ -41,7 +38,7 @@ class LeftSelector extends React.Component {
         let list = this.state.templateId;
         const items = list.map((number) =>
             <div>
-                <button key={number} onClick={this.goToView.bind(this, number)}>
+                <button key={number} className={"problemButton"} onClick={this.goToView.bind(this, number)}>
                     Problem: {number}
                 </button>
             </div>
@@ -53,8 +50,21 @@ class LeftSelector extends React.Component {
         let buttons = this.state.templateId;
         let templates = this.state.templates;
         let len = buttons.length + 1
-        buttons.push(len);
-        templates.push(<Editor saveFinalData={this.saveParentDataFunction} key={len}/>)
+        //buttons.push(len);
+        if (buttons.length === 0) {
+            buttons = [1];
+        } else {
+            buttons.push(len);
+        }
+        let data = {
+            template: <ImageOnly/>,
+            columnContent: [],
+            content: [],
+            identifier: len
+        }
+        console.log("sending KEY: " + len);
+        console.log(buttons);
+        templates.push(<Editor saveFinalData={this.saveParentDataFunction} data={data}/>)
         this.setState({
             templateId: buttons,
             templates: templates
@@ -65,13 +75,14 @@ class LeftSelector extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div>
-                    <button onClick={this.addTemplate}>
-                        <h5>add template</h5>
+                <div className={"appendBar"}>
+                    <input type="text" name="Title" className={"inputBoxLong"} placeholder={"Title"}
+                           onChange={this.onTitleChange} value={this.state.title}/>
+                    <button className={"appendButton"} onClick={this.addTemplate}>
+                        <h5>+</h5>
                     </button>
                 </div>
                 {this.renderViews()}
-                <h1>ss</h1>
             </React.Fragment>
         )
     }

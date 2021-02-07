@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added save function when moving to different templates. Does not update, just stores info in states.">
+      <change afterPath="$PROJECT_DIR$/public/add-circle-outline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/remove-circle-outline.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ContentEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LeftSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeftSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RightTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problemSolution.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/problemSolution.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +40,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.20" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -46,6 +49,11 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alexa\WebstormProjects\jupyterlabscreator\public" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
@@ -94,7 +102,16 @@
       <workItem from="1612033419578" duration="13151000" />
       <workItem from="1612054465987" duration="927000" />
       <workItem from="1612060047726" duration="1103000" />
-      <workItem from="1612061805602" duration="861000" />
+      <workItem from="1612061805602" duration="1030000" />
+      <workItem from="1612114313678" duration="8385000" />
+      <workItem from="1612123214615" duration="109000" />
+      <workItem from="1612152983794" duration="6298000" />
+      <workItem from="1612192837280" duration="4495000" />
+      <workItem from="1612295281893" duration="41000" />
+      <workItem from="1612299393041" duration="639000" />
+      <workItem from="1612469146666" duration="36000" />
+      <workItem from="1612636233114" duration="5761000" />
+      <workItem from="1612659530685" duration="3323000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -124,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610317653709</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added save function when moving to different templates. Does not update, just stores info in states.">
+      <created>1612062819114</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612062819114</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
