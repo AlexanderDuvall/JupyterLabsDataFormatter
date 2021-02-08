@@ -1,5 +1,6 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from "./Table";
 
 
 export class RightTable extends React.Component {
@@ -107,21 +108,7 @@ export class RightTable extends React.Component {
                         </div>
                         <div className="TableDiv">
                             <div className={"problemSelector"}>
-                                <div>
-                                    <button className="Append" onClick={() => this.append()}>
-                                        <img className={"imageButton"}
-                                             src="add-circle-outline.svg"
-                                             alt="logo.svg"/>
-                                    </button>
-                                    <button className="Append" onClick={() => this.pop()}>
-                                        <img className={"imageButton"}
-                                             src="remove-circle-outline.svg"
-                                             alt="logo.svg"/>
-                                    </button>
-                                </div>
-                                <table className="">
-                                    {this.renderTable()}
-                                </table>
+                                <Table/>
                             </div>
 
                         </div>
