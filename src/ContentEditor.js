@@ -47,7 +47,6 @@ componentWillUnmount() {
     }
 
     append(event) {
-        event.preventDefault();
         var a = this.state.columnContent;
         a.push(a.length + 1)
         this.setState({
@@ -57,7 +56,6 @@ componentWillUnmount() {
     }
 
     pop(event) {
-        event.preventDefault();
         var a = this.state.columnContent;
         a.pop();
         this.setState({

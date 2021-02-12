@@ -9,10 +9,13 @@ export class RightTable extends React.Component {
         this.state = {
             columns: [1, 2,],
             title: "",
-            probStatement: ""
+            probStatement: "",
+            showImage: true
         }
         this.append = this.append.bind(this);
         this.pop = this.pop.bind(this);
+        this.showImageHandler = this.showImageHandler.bind(this);
+
     }
 
     renderTable() {
@@ -89,11 +92,19 @@ export class RightTable extends React.Component {
         return <tr>{r}</tr>;
     }
 
+    showImageHandler(event) {
+        const target = event.target;
+        const value = target.checked;
+        this.setState({
+            showImage: value
+        })
+    }
 
     render() {
         return (
             <React.Fragment>
                 <div className="rightBody">
+
                     <h3 className={"centerText"}>Title</h3>
                     <div className={"centerInput"}>
                         <input type="text" name="Title" className={"inputBoxLong"} placeholder={"Title"}
@@ -101,10 +112,18 @@ export class RightTable extends React.Component {
                     </div>
                     <br/>
                     <h3 className={"centerText"}>Problem Info</h3>
+                    <div className={"imageToggler"}>
+                        <h5 className={"centerText"}>Show Image? </h5>
+                        <input
+                            name="isGoing" type="checkbox"
+                            checked={this.state.showImage}
+                            onChange={this.showImageHandler}/>
+                    </div>
+
                     <div className="graphicsSelector">
                         <div className="routerImage">
-                            <img
-                                src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
+                            <img className={this.state.showImage ? "routerImage" : "routerImage hidden"}
+                                 src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
                         </div>
                         <div className="TableDiv">
                             <div className={"problemSelector"}>

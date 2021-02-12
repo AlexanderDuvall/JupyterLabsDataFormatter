@@ -8,8 +8,11 @@ export class BottomTable extends React.Component {
         super(props);
         this.state = {
             title: "",
-            probStatement: ""
+            probStatement: "",
+            showImage: true
         }
+        this.showImageHandler = this.showImageHandler.bind(this);
+
     }
 
     onTitleChange(event) {
@@ -23,11 +26,18 @@ export class BottomTable extends React.Component {
             title: event.target.value
         })
     }
-
+    showImageHandler(event) {
+        const target = event.target;
+        const value =target.checked;
+        this.setState({
+            showImage: value
+        })
+    }
     render() {
         return (
             <React.Fragment>
                 <div className="rightBody">
+
                     <h3 className={"centerText"}>Title</h3>
                     <div className={"centerInput"}>
                         <input type="text" name="Title" className={"inputBoxLong"} placeholder={"Title"}
@@ -35,9 +45,14 @@ export class BottomTable extends React.Component {
                     </div>
                     <br/>
                     <h3 className={"centerText"}>Problem Info</h3>
+                    <h4>Show Image</h4>
+                    <input
+                        name="isGoing" type="checkbox"
+                        checked={this.state.showImage}
+                        onChange={this.showImageHandler}/>
                     <div className="graphicsSelectorBottom">
                         <div className="routerImageBottom">
-                            <img
+                            <img className={this.state.showImage? "routerImage": "routerImage hidden"}
                                 src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
                         </div>
                     </div>

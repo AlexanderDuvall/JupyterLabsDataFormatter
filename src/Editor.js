@@ -6,9 +6,7 @@ import BottomRightTable from "./BottomRightTable";
 import ContentEditor from "./ContentEditor";
 import ImageOnly from "./ImageOnly";
 
-//TODO Add functions to select what tables will be shown, and choose what to display.
 //TODO Add template without image.
-//TODO
 export class Editor extends React.Component {
     constructor(props) {
         super(props);

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added save function when moving to different templates. Does not update, just stores info in states.">
-      <change afterPath="$PROJECT_DIR$/src/Table.js" afterDir="false" />
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added custom table template for ease. Added the table to BottomRightTable.js, BottomTable.js, and RightTable.js. Has push and pop functions for appending tables. Appending stops at 4 and pops stop at 1.">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BottomTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContentEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImageOnly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageOnly.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RightTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
@@ -109,7 +111,9 @@
       <workItem from="1612469146666" duration="36000" />
       <workItem from="1612636233114" duration="5761000" />
       <workItem from="1612659530685" duration="3323000" />
-      <workItem from="1612739815011" duration="5054000" />
+      <workItem from="1612739815011" duration="5399000" />
+      <workItem from="1612901193276" duration="18000" />
+      <workItem from="1613154080109" duration="3532000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -146,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612062819114</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added custom table template for ease. Added the table to BottomRightTable.js, BottomTable.js, and RightTable.js. Has push and pop functions for appending tables. Appending stops at 4 and pops stop at 1.">
+      <created>1612752248850</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612752248850</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +181,8 @@
     <MESSAGE value="BottomTable.js, BottomRightTable.js, and RightTable.js Correctly formatted." />
     <MESSAGE value="Added pop function on columns, can now add templates with LeftSelector.js, can select which template to use with dropdown menu." />
     <MESSAGE value="Added save function when moving to different templates. Does not update, just stores info in states." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added save function when moving to different templates. Does not update, just stores info in states." />
+    <MESSAGE value="Added custom table template for ease. Added the table to BottomRightTable.js, BottomTable.js, and RightTable.js. Has push and pop functions for appending tables. Appending stops at 4 and pops stop at 1." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added custom table template for ease. Added the table to BottomRightTable.js, BottomTable.js, and RightTable.js. Has push and pop functions for appending tables. Appending stops at 4 and pops stop at 1." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
