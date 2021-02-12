@@ -12,7 +12,7 @@ class Table extends React.Component {
     }
 
     renderTable() {
-        return <table className="">
+        return <table className="tableSpacing">
             <thead>
             <tr>
                 {this.renderRowsSelection(this.state.columns.length)}

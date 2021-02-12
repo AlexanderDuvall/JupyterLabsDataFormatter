@@ -92,19 +92,22 @@ code {
 }
 
 .routerImage {
-    margin: auto;
+    margin-left:8%;
+    margin-bottom:10px;
     min-width: 60%;
     max-width: 80%;
     height: auto;
-    padding-bottom: 20px;
+    border: 2px solid lightgray;
 }
-
+.tableSpacing{margin-left:10px;
+}
 .routerImageBottom {
     margin: auto;
     min-width: 60%;
     max-width: 80%;
     height: auto;
     padding-bottom: 20px;
+    border:solid;
 }
 
 .labelClass {
@@ -131,6 +134,7 @@ code {
     min-height: 300px;
     max-height: 500px;
     display: flex;
+     padding:15px
 }
 
 .problemSelector {
@@ -174,7 +178,7 @@ code {
 }
 .blocked{
     display:block;
-    width: 48px;
+    width: 40px;
     margin-top: 7px;
 }
 .hidden {
@@ -187,6 +191,7 @@ code {
     display: flex;
     min-width: 200px;
     max-width: 500px;
+    margin-top:40px;
 }
 
 .BottomLeft {

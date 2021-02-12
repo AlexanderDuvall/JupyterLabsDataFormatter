@@ -26,13 +26,15 @@ export class BottomTable extends React.Component {
             title: event.target.value
         })
     }
+
     showImageHandler(event) {
         const target = event.target;
-        const value =target.checked;
+        const value = target.checked;
         this.setState({
             showImage: value
         })
     }
+
     render() {
         return (
             <React.Fragment>
@@ -45,18 +47,19 @@ export class BottomTable extends React.Component {
                     </div>
                     <br/>
                     <h3 className={"centerText"}>Problem Info</h3>
-                    <label className="container">
-                        <input type="checkbox"
-                               checked={this.state.showImage}
-                               onChange={this.showImageHandler}/>
-                        <span className="checkmark"></span>
-                        <h5 className= "labelText">  Show Image?</h5>
-                    </label>
+
 
                     <div className="graphicsSelectorBottom">
                         <div className="routerImageBottom">
-                            <img className={this.state.showImage? "routerImage": "routerImage hidden"}
-                                src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
+                            <label className="container">
+                                <input type="checkbox"
+                                       checked={this.state.showImage}
+                                       onChange={this.showImageHandler}/>
+                                <span className="checkmark"></span>
+                                <h5 className="labelText"> Show Image?</h5>
+                            </label>
+                            <img className={this.state.showImage ? "routerImage" : "routerImage hidden"}
+                                 src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
                         </div>
                     </div>
                     <div className="sideBySide">

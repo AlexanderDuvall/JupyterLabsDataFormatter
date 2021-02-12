@@ -113,18 +113,19 @@ export class RightTable extends React.Component {
                     <br/>
                     <h3 className={"centerText"}>Problem Info</h3>
                     <div className={"imageToggler"}>
-                        <label className="container">
-                            <input type="checkbox"
-                                   checked={this.state.showImage}
-                                   onChange={this.showImageHandler}/>
-                            <span className="checkmark"></span>
-                            <h5 className="labelText"> Show Image?</h5>
-                        </label>
+
 
                     </div>
 
                     <div className="graphicsSelector">
-                        <div className="routerImage">
+                        <div className="routerImageBottom">
+                            <label className="container">
+                                <input type="checkbox"
+                                       checked={this.state.showImage}
+                                       onChange={this.showImageHandler}/>
+                                <span className="checkmark"></span>
+                                <h5 className= "labelText">  Show Image?</h5>
+                            </label>
                             <img className={this.state.showImage ? "routerImage" : "routerImage hidden"}
                                  src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
                         </div>

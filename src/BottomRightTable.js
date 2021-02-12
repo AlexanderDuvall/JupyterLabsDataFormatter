@@ -44,15 +44,15 @@ export class BottomRightTable extends React.Component {
                     </div>
                     <br/>
                     <h3 className={"centerText"}>Problem Info</h3>
-                    <label className="container">
-                        <input type="checkbox"
-                               checked={this.state.showImage}
-                               onChange={this.showImageHandler}/>
-                        <span className="checkmark"></span>
-                      <h5 className= "labelText">  Show Image?</h5>
-                    </label>
                     <div className="graphicsSelector">
                         <div className="routerImageBottom">
+                            <label className="container">
+                                <input type="checkbox"
+                                       checked={this.state.showImage}
+                                       onChange={this.showImageHandler}/>
+                                <span className="checkmark"></span>
+                                <h5 className= "labelText">  Show Image?</h5>
+                            </label>
                             <img className={this.state.showImage ? "routerImage" : "routerImage hidden"}
                                  src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
                         </div>

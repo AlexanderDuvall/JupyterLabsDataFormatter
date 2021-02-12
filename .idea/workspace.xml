@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added better append and pop buttons. On hover turns blue.">
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Formatting fixes. Bloat mac address data added for presentation purposes">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContentEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BottomTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImageOnly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageOnly.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RightTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
@@ -118,7 +120,7 @@
       <workItem from="1612659530685" duration="3323000" />
       <workItem from="1612739815011" duration="5399000" />
       <workItem from="1612901193276" duration="18000" />
-      <workItem from="1613154080109" duration="7189000" />
+      <workItem from="1613154080109" duration="8488000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -183,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613160003069</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Formatting fixes. Bloat mac address data added for presentation purposes">
+      <created>1613161332433</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1613161332433</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +221,8 @@
     <MESSAGE value="Modified checkbox to be visually appealing. Is now a shade of orange properly fit above the picture." />
     <MESSAGE value="Added better button append and pop buttons." />
     <MESSAGE value="Added better append and pop buttons. On hover turns blue." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added better append and pop buttons. On hover turns blue." />
+    <MESSAGE value="Formatting fixes. Bloat mac address data added for presentation purposes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatting fixes. Bloat mac address data added for presentation purposes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
