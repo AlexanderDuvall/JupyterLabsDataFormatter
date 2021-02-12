@@ -14,10 +14,16 @@ code {
 }
 
 .Append {
-    width: 70px;
-    height: 10px;
+    width: 40px;
+    height: 40px;
     background-color: transparent;
-    border: 0px;
+    border: 2px solid black;
+    border-radius: 100px;
+    padding-bottom: 10px;
+    font-size: 22px;
+}
+.Append:hover{
+    background: lightblue;
 }
 
 .column {
@@ -63,6 +69,8 @@ code {
     border: 1px solid white;
     background-color: lightblue;
 }
+
+
 
 #root {
     width: 100%;
@@ -239,9 +247,11 @@ tr:nth-child(even) {
     user-select: none;
     margin-top: 15px;
 }
-.labelText{
+
+.labelText {
     margin-top: 4px;
 }
+
 /* Hide the browser's default checkbox */
 .container input {
     position: absolute;

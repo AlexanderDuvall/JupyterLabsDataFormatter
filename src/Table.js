@@ -80,14 +80,10 @@ class Table extends React.Component {
             <React.Fragment>
                 <div>
                     <button className="Append" onClick={() => this.append()}>
-                        <img className={"imageButton"}
-                             src="add-circle-outline.svg"
-                             alt="logo.svg"/>
+                        +
                     </button>
                     <button className="Append" onClick={() => this.pop()}>
-                        <img className={"imageButton"}
-                             src="remove-circle-outline.svg"
-                             alt="logo.svg"/>
+                        -
                     </button>
                 </div>
                 {this.renderTable()}

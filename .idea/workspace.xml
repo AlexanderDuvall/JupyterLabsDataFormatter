@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added Checkbox to hide Router Image. Not visually appealing.">
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Modified checkbox to be visually appealing. Is now a shade of orange properly fit above the picture.">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BottomTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ImageOnly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageOnly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RightTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContentEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +117,7 @@
       <workItem from="1612659530685" duration="3323000" />
       <workItem from="1612739815011" duration="5399000" />
       <workItem from="1612901193276" duration="18000" />
-      <workItem from="1613154080109" duration="4826000" />
+      <workItem from="1613154080109" duration="5856000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -170,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613157646561</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Modified checkbox to be visually appealing. Is now a shade of orange properly fit above the picture.">
+      <created>1613158924974</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613158924974</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +201,8 @@
     <MESSAGE value="Added save function when moving to different templates. Does not update, just stores info in states." />
     <MESSAGE value="Added custom table template for ease. Added the table to BottomRightTable.js, BottomTable.js, and RightTable.js. Has push and pop functions for appending tables. Appending stops at 4 and pops stop at 1." />
     <MESSAGE value="Added Checkbox to hide Router Image. Not visually appealing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Checkbox to hide Router Image. Not visually appealing." />
+    <MESSAGE value="Modified checkbox to be visually appealing. Is now a shade of orange properly fit above the picture." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified checkbox to be visually appealing. Is now a shade of orange properly fit above the picture." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

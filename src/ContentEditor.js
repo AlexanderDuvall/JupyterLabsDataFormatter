@@ -73,14 +73,10 @@ componentWillUnmount() {
 
                 <div className="problemSelector">
                     <button className="Append" onClick={() => this.append()}>
-                        <img className={"imageButton"}
-                             src="add-circle-outline.svg"
-                             alt="logo.svg"/>
+                        +
                     </button>
                     <button className="Append" onClick={() => this.pop()}>
-                        <img className={"imageButton"}
-                             src="remove-circle-outline.svg"
-                             alt="logo.svg"/>
+                        -
                     </button>
                     {this.renderColumnContent()}
                 </div>
