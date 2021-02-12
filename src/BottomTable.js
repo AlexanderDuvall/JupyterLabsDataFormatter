@@ -45,11 +45,14 @@ export class BottomTable extends React.Component {
                     </div>
                     <br/>
                     <h3 className={"centerText"}>Problem Info</h3>
-                    <h4>Show Image</h4>
-                    <input
-                        name="isGoing" type="checkbox"
-                        checked={this.state.showImage}
-                        onChange={this.showImageHandler}/>
+                    <label className="container">
+                        <input type="checkbox"
+                               checked={this.state.showImage}
+                               onChange={this.showImageHandler}/>
+                        <span className="checkmark"></span>
+                        <h5 className= "labelText">  Show Image?</h5>
+                    </label>
+
                     <div className="graphicsSelectorBottom">
                         <div className="routerImageBottom">
                             <img className={this.state.showImage? "routerImage": "routerImage hidden"}

@@ -11,7 +11,7 @@ export class ImageOnly extends React.Component {
 
     showImageHandler(event) {
         const target = event.target;
-        const value =target.checked;
+        const value = target.checked;
         this.setState({
             showImage: value
         })
@@ -21,15 +21,19 @@ export class ImageOnly extends React.Component {
         return (
             <React.Fragment>
                 <div className="rightBody">
-                    <h4>Show Image</h4>
-                    <input
-                        name="isGoing" type="checkbox"
-                        checked={this.state.showImage}
-                        onChange={this.showImageHandler}/>
+
+                    <label className="container">
+                        <input type="checkbox"
+                               checked={this.state.showImage}
+                               onChange={this.showImageHandler}/>
+                        <span className="checkmark"></span>
+                        <h5 className= "labelText">  Show Image?</h5>
+                    </label>
+
                     <div className="graphicsSelector">
                         <div className="routerImage">
-                            <img className={this.state.showImage? "routerImage": "routerImage hidden"}
-                                src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
+                            <img className={this.state.showImage ? "routerImage" : "routerImage hidden"}
+                                 src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
                         </div>
                     </div>
                 </div>

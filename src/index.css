@@ -24,9 +24,10 @@ code {
     width: 120px;
     height: 40px;
     margin-left: 15px;
-    margin-top:5px;
+    margin-top: 5px;
 }
-.headerSelector{
+
+.headerSelector {
     margin-left: 12px;
     width: 124px;
     height: 33px;
@@ -48,7 +49,8 @@ code {
     background-color: white;
     border: 0px solid white;
 }
-.problemButton:hover{
+
+.problemButton:hover {
     background-color: lightblue;
 }
 
@@ -61,6 +63,7 @@ code {
     border: 1px solid white;
     background-color: lightblue;
 }
+
 #root {
     width: 100%;
     display: flex;
@@ -128,10 +131,12 @@ code {
     display: flex;
     padding-bottom: 101px;
 }
+
 .imageToggler {
     width: 200px;
     display: flex;
 }
+
 .centerInput {
     width: 70%;
     margin-left: 10px;
@@ -149,7 +154,7 @@ code {
 }
 
 .TableDivBottom {
-    width:100%;
+    width: 100%;
     height: auto;
 }
 
@@ -158,9 +163,11 @@ code {
     height: auto;
     margin-left: 31px;
 }
-.hidden{
-    display:none;
+
+.hidden {
+    display: none;
 }
+
 .sideBySide {
     width: 100%;
     height: auto;
@@ -174,20 +181,22 @@ code {
 }
 
 .BottomRight {
-    float:right;
+    float: right;
     margin-left: 200px;
 }
 
 .l2Header {
     border-bottom: 1px solid black;
 }
+
 td {
     border: 1px solid #dddddd;
     padding: 4px;
     margin: auto;
     font-size: 14px;
 }
-th{
+
+th {
     border: 1px solid #dddddd;
     padding-right: 13px;
     padding-bottom: 13px;
@@ -197,6 +206,7 @@ th{
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
 #left {
     width: 20%;
     height: 1000px;
@@ -208,4 +218,80 @@ tr:nth-child(even) {
     width: 70%;
     height: 100%;
     margin-left: 22%;
+}
+
+/*  ----------------------------------------------------------------------------------------------------------  */
+/* Customize the label (the container) */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    margin-left: auto;
+    float: left;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 15px;
+}
+.labelText{
+    margin-top: 4px;
+}
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 6px;
+    left: 162px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: coral;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added custom table template for ease. Added the table to BottomRightTable.js, BottomTable.js, and RightTable.js. Has push and pop functions for appending tables. Appending stops at 4 and pops stop at 1.">
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added Checkbox to hide Router Image. Not visually appealing.">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BottomTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContentEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ImageOnly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageOnly.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RightTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
@@ -26,6 +24,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1lx5eVRX8vKPNr5d8idK2h9JrDS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -113,7 +119,7 @@
       <workItem from="1612659530685" duration="3323000" />
       <workItem from="1612739815011" duration="5399000" />
       <workItem from="1612901193276" duration="18000" />
-      <workItem from="1613154080109" duration="3532000" />
+      <workItem from="1613154080109" duration="4826000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -157,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612752248850</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added Checkbox to hide Router Image. Not visually appealing.">
+      <created>1613157646561</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613157646561</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +195,8 @@
     <MESSAGE value="Added pop function on columns, can now add templates with LeftSelector.js, can select which template to use with dropdown menu." />
     <MESSAGE value="Added save function when moving to different templates. Does not update, just stores info in states." />
     <MESSAGE value="Added custom table template for ease. Added the table to BottomRightTable.js, BottomTable.js, and RightTable.js. Has push and pop functions for appending tables. Appending stops at 4 and pops stop at 1." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added custom table template for ease. Added the table to BottomRightTable.js, BottomTable.js, and RightTable.js. Has push and pop functions for appending tables. Appending stops at 4 and pops stop at 1." />
+    <MESSAGE value="Added Checkbox to hide Router Image. Not visually appealing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Checkbox to hide Router Image. Not visually appealing." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

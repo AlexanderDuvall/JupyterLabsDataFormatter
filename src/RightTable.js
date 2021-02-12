@@ -113,11 +113,14 @@ export class RightTable extends React.Component {
                     <br/>
                     <h3 className={"centerText"}>Problem Info</h3>
                     <div className={"imageToggler"}>
-                        <h5 className={"centerText"}>Show Image? </h5>
-                        <input
-                            name="isGoing" type="checkbox"
-                            checked={this.state.showImage}
-                            onChange={this.showImageHandler}/>
+                        <label className="container">
+                            <input type="checkbox"
+                                   checked={this.state.showImage}
+                                   onChange={this.showImageHandler}/>
+                            <span className="checkmark"></span>
+                            <h5 className= "labelText">  Show Image?</h5>
+                        </label>
+
                     </div>
 
                     <div className="graphicsSelector">
