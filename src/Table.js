@@ -68,9 +68,9 @@ class Table extends React.Component {
     }
 
     renderRows(rows) {
-        let r = [<td>1</td>];
+        let r = [<td>00:1A:C2:7B:00:47</td>];
         for (let i = 0; i < rows - 1; i++) {
-            r.push(<td>1</td>);
+            r.push(<td>00:1A:C2:7B:00:47</td>);
         }
         return <tr>{r}</tr>;
     }
@@ -78,15 +78,17 @@ class Table extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div>
-                    <button className="Append" onClick={() => this.append()}>
-                        +
-                    </button>
-                    <button className="Append" onClick={() => this.pop()}>
-                        -
-                    </button>
+                <div className="appendBar">
+                    <div className="blocked">
+                        <button className="Append" onClick={() => this.append()}>
+                            +
+                        </button>
+                        <button className="Append" onClick={() => this.pop()}>
+                            -
+                        </button>
+                    </div>
+                    {this.renderTable()}
                 </div>
-                {this.renderTable()}
             </React.Fragment>
         )
     }

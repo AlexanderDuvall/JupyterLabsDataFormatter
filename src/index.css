@@ -30,7 +30,7 @@ code {
     width: 120px;
     height: 40px;
     margin-left: 15px;
-    margin-top: 5px;
+    margin-top: 25px;
 }
 
 .headerSelector {
@@ -109,6 +109,7 @@ code {
 
 .labelClass {
     width: 100%;
+    margin-top: 20px;
 }
 
 .graphicsSelectorBottom {
@@ -171,7 +172,11 @@ code {
     height: auto;
     margin-left: 31px;
 }
-
+.blocked{
+    display:block;
+    width: 48px;
+    margin-top: 7px;
+}
 .hidden {
     display: none;
 }

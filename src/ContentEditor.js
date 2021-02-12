@@ -13,9 +13,9 @@ class ContentEditor extends React.Component {
         this.saveContent = this.saveContent.bind(this);
     }
 
-componentWillUnmount() {
-    this.props.saveNewData(this.state.columnContent,this.state.content);
-}
+    componentWillUnmount() {
+        this.props.saveNewData(this.state.columnContent, this.state.content);
+    }
 
     saveContent(event, key) {
         let updatedContent = this.state.content;
@@ -32,15 +32,17 @@ componentWillUnmount() {
         }
         return <option value={compare}>{compare}</option>
     }
+
     renderColumnContent() {
         let content = this.state.columnContent
         const items = content.map((number) =>
-            <select className={"column"} key={number} name="Templates" id="Templates" onSelect={(e)=>this.saveContent(number,e)}>
-                {this.isSelected(number,"IP Address")}
-                {this.isSelected(number,"MAC Address")}
-                {this.isSelected(number,"VLAN")}
-                {this.isSelected(number,"Router")}
-                {this.isSelected(number,"Gateway")}
+            <select className={"column"} key={number} name="Templates" id="Templates"
+                    onSelect={(e) => this.saveContent(number, e)}>
+                {this.isSelected(number, "IP Address")}
+                {this.isSelected(number, "MAC Address")}
+                {this.isSelected(number, "VLAN")}
+                {this.isSelected(number, "Router")}
+                {this.isSelected(number, "Gateway")}
             </select>
         );
         return items;
@@ -57,11 +59,13 @@ componentWillUnmount() {
 
     pop(event) {
         var a = this.state.columnContent;
-        a.pop();
-        this.setState({
-            columnContent: a
-        });
-        this.renderColumnContent();
+        if (a.length !== 1) {
+            a.pop();
+            this.setState({
+                columnContent: a
+            });
+            this.renderColumnContent();
+        }
     }
 
     render() {
@@ -70,14 +74,15 @@ componentWillUnmount() {
                 <div className="centerInput">
                     <label className="labelClass">Problem Solution</label>
                 </div>
-
                 <div className="problemSelector">
-                    <button className="Append" onClick={() => this.append()}>
-                        +
-                    </button>
-                    <button className="Append" onClick={() => this.pop()}>
-                        -
-                    </button>
+                    <div className="blocked">
+                        <button className="Append" onClick={() => this.append()}>
+                            +
+                        </button>
+                        <button className="Append" onClick={() => this.pop()}>
+                            -
+                        </button>
+                    </div>
                     {this.renderColumnContent()}
                 </div>
             </React.Fragment>
