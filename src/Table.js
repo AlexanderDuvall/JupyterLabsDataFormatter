@@ -11,6 +11,8 @@ class Table extends React.Component {
         }
     }
 
+//TODO Add dropdown on tables for predefined data sources. A filter. Like: bridge template will show bridge data only.
+
     renderTable() {
         return <table className="tableSpacing">
             <thead>

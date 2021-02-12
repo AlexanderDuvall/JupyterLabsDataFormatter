@@ -68,6 +68,11 @@ class ContentEditor extends React.Component {
         }
     }
 
+//TODO, add what solution types are available in solution. So only a select few options are available.
+    //TODO, account for variability in practice.
+    //TODO, hash table that defines a given variable. An input text with a dropdown box.
+    // This variable can then be used in the problem statement
+
     render() {
         return (
             <React.Fragment>
