@@ -6,9 +6,13 @@ class Table extends React.Component {
         super(props);
         this.append = this.append.bind(this);
         this.pop = this.pop.bind(this);
+        this.changeSelection = this.changeSelection.bind(this);
         this.state = {
             columns: [1, 2,],
+            tableType: "Host",
+            tableElements:"-"
         }
+        this.tableOptions("Host");
     }
 
 //TODO Add dropdown on tables for predefined data sources. A filter. Like: bridge template will show bridge data only.
@@ -24,6 +28,16 @@ class Table extends React.Component {
             {this.renderRows(this.state.columns.length)}
             </tbody>
         </table>
+    }
+
+    changeSelection(e) {
+        let type = e.target.value;
+        let elements = this.tableOptions(type)
+        console.log("changing selection: "+type);
+        this.setState({
+            type: type,
+            tableElements: elements
+        })
     }
 
     append(e) {
@@ -51,20 +65,50 @@ class Table extends React.Component {
         }
     }
 
-    tableOptions() {
-        return <select className={"headerSelector"}>
-            <option value={"IP Address"}>"IP Address"</option>
-            <option value={"MAC Address"}>MAC Address</option>
-            <option value={"VLAN"}>VLAN</option>
-            <option value={"Router"}>Router</option>
-            <option value={"Gateway"}>Gateway</option>
-        </select>
+    tableOptions(type) {
+        switch (type) {
+            case "Bridge":
+                return <select className={"headerSelector"}>
+                    <option value={"IP Address"}>1IP Address</option>
+                    <option value={"MAC Address"}>MAC Address</option>
+                    <option value={"VLAN"}>VLAN</option>
+                    <option value={"Router"}>Router</option>
+                    <option value={"Gateway"}>Gateway</option>
+                </select>
+            case "Host":
+                return <select className={"headerSelector"}>
+                    <option value={"IP Address"}>2IP Address</option>
+                    <option value={"MAC Address"}>MAC Address</option>
+                    <option value={"VLAN"}>VLAN</option>
+                    <option value={"Router"}>Router</option>
+                    <option value={"Gateway"}>Gateway</option>
+                </select>
+            case "Router":
+                return <select className={"headerSelector"}>
+                    <option value={"IP Address"}>3IP Address</option>
+                    <option value={"MAC Address"}>MAC Address</option>
+                    <option value={"VLAN"}>VLAN</option>
+                    <option value={"Router"}>Router</option>
+                    <option value={"Gateway"}>Gateway</option>
+                </select>
+            case "Gateway":
+                return <select className={"headerSelector"}>
+                    <option value={"IP Address"}>4IP Address</option>
+                    <option value={"MAC Address"}>MAC Address</option>
+                    <option value={"VLAN"}>VLAN</option>
+                    <option value={"Router"}>Router</option>
+                    <option value={"Gateway"}>Gateway</option>
+                </select>
+            default:
+                return "-"
+        }
+
     }
 
     renderRowsSelection(rows) {
-        let r = [<th scope="col">{this.tableOptions()} </th>];
+        let r = [<th scope="col">{this.state.tableElements} </th>];
         for (let i = 0; i < rows - 1; i++) {
-            r.push(<th scope="col">{this.tableOptions()} </th>);
+            r.push(<th scope="col">{this.state.tableElements} </th>);
         }
         return r;
     }
@@ -80,6 +124,13 @@ class Table extends React.Component {
     render() {
         return (
             <React.Fragment>
+                <select className={"headerSelector"} onChange={ this.changeSelection }>
+                    <option value={"default"}>Select</option>
+                    <option value={"Router"}>Router</option>
+                    <option value={"Host"}>Host</option>
+                    <option value={"Bridge"}>Bridge</option>
+                    <option value={"Gateway"}>Gateway</option>
+                </select>
                 <div className="appendBar">
                     <div className="blocked">
                         <button className="Append" onClick={() => this.append()}>

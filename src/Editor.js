@@ -6,7 +6,6 @@ import BottomRightTable from "./BottomRightTable";
 import ContentEditor from "./ContentEditor";
 import ImageOnly from "./ImageOnly";
 
-//TODO Add template without image.
 export class Editor extends React.Component {
     constructor(props) {
         super(props);
