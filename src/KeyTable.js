@@ -28,25 +28,27 @@ class KeyTable extends React.Component {
     changeOption(e, index) {
         let v = this.state.tableValues;
         console.log("asdfasfasdf");
-        console.log(e);
-        v[index] = e.target.value.toString();
+        console.log(e.target.value.toString());
+        console.log(index);
+        v[index] = this.constructDropdown(e.target.value.toString());
         this.setState({
             tableValues: v
-        })
-        this.constructDropdown(this.state.tableValues[index])
+        });
+        this.constructTable();
+        // this.constructDropdown(this.state.tableValues[index])
     }
 
     constructOptions(i) {
         return <select onChange={(e) => this.changeOption(e, i)} className={"headerSelector"}>
             <option selected value={"host"}>Host</option>
-            <option value={"vlan"}>Vlan</option>
+            <option value={"bridge"}>Bridge</option>
             <option value={"gateway"}>Gateway</option>
-            <option value={"port"}>Port</option>
+            <option value={"router"}>Router</option>
         </select>
     }
 
     constructDropdown(param) {
-        console.log("constructing with: " + param +"_");
+        console.log("constructing with: " + param + "_");
         switch (param) {
             case "host":
                 console.log("host.....")
@@ -78,10 +80,7 @@ class KeyTable extends React.Component {
 
     constructTable() {
         let variables = this.state.tableValues;
-
-
         let a = [];
-
         for (let i = 0; i < variables.length; i++) {
             a.push(<tr key={i}>
                 <td className={"tdButton"}>
@@ -91,7 +90,7 @@ class KeyTable extends React.Component {
                 </td>
                 <td className={"tdFormat"} key={i + "child_1"}><input placeholder="Give variable a name"/></td>
                 <td key={i + "child_2"}>{this.constructOptions(i)}</td>
-                <td key={i + "child_3"}>{this.constructDropdown(this.state.tableValues[i])}</td>
+                <td key={i + "child_3"}>{variables[i]}</td>
             </tr>);
             console.log("going through matrix:");
         }

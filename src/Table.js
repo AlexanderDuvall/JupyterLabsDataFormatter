@@ -1,7 +1,7 @@
 import React from "react";
 
 class Table extends React.Component {
-
+//TODO Add append table function
     constructor(props) {
         super(props);
         this.append = this.append.bind(this);

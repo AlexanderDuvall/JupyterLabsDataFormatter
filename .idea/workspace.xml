@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added KeyTable.js">
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Add textbox input to KeyTable.js. When second column changes, the third will accordingly. &#10;Bug: Third column doesn't change.">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContentEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/KeyTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/KeyTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +130,8 @@
       <workItem from="1613165358612" duration="1619000" />
       <workItem from="1614129421912" duration="438000" />
       <workItem from="1614129880145" duration="3332000" />
-      <workItem from="1614207333694" duration="12781000" />
+      <workItem from="1614207333694" duration="13174000" />
+      <workItem from="1614268474256" duration="1049000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -222,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614221022408</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add textbox input to KeyTable.js. When second column changes, the third will accordingly. &#10;Bug: Third column doesn't change.">
+      <created>1614228463559</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614228463559</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +264,8 @@
     <MESSAGE value="Image Box Formatting fixes. Added borders and fixed table/Button spacing." />
     <MESSAGE value="Added templates for tables. Upon selection of template, column drop down options on the table change." />
     <MESSAGE value="Added KeyTable.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added KeyTable.js" />
+    <MESSAGE value="Add textbox input to KeyTable.js. When second column changes, the third will accordingly. &#10;Bug: Third column doesn't change." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add textbox input to KeyTable.js. When second column changes, the third will accordingly. &#10;Bug: Third column doesn't change." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
