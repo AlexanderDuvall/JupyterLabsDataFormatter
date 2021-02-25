@@ -22,7 +22,8 @@ code {
     padding-bottom: 10px;
     font-size: 22px;
 }
-.Append:hover{
+
+.Append:hover {
     background: lightblue;
 }
 
@@ -71,7 +72,6 @@ code {
 }
 
 
-
 #root {
     width: 100%;
     display: flex;
@@ -92,22 +92,25 @@ code {
 }
 
 .routerImage {
-    margin-left:8%;
-    margin-bottom:10px;
+    margin-left: 8%;
+    margin-bottom: 10px;
     min-width: 60%;
     max-width: 80%;
     height: auto;
     border: 2px solid lightgray;
 }
-.tableSpacing{margin-left:10px;
+
+.tableSpacing {
+    margin-left: 10px;
 }
+
 .routerImageBottom {
     margin: auto;
     min-width: 60%;
     max-width: 80%;
     height: auto;
     padding-bottom: 20px;
-    border:solid;
+    border: solid;
 }
 
 .labelClass {
@@ -134,7 +137,7 @@ code {
     min-height: 300px;
     max-height: 500px;
     display: flex;
-     padding:15px
+    padding: 15px
 }
 
 .problemSelector {
@@ -176,11 +179,13 @@ code {
     height: auto;
     margin-left: 31px;
 }
-.blocked{
-    display:block;
+
+.blocked {
+    display: block;
     width: 40px;
     margin-top: 7px;
 }
+
 .hidden {
     display: none;
 }
@@ -191,7 +196,7 @@ code {
     display: flex;
     min-width: 200px;
     max-width: 500px;
-    margin-top:40px;
+    margin-top: 40px;
 }
 
 .BottomLeft {
@@ -209,20 +214,25 @@ code {
 
 td {
     border: 1px solid #dddddd;
-    padding: 4px;
+    padding-left: 4px;
     margin: auto;
-    font-size: 14px;
+    font-size: 17px;
+    min-width: 112px;
+    padding-right: 20px;
+    padding-bottom: 10px;
 }
-
+.tdFormat{
+    padding-top: 10px;
+    padding-left: 10px;
+}
 th {
     border: 1px solid #dddddd;
     padding-right: 13px;
     padding-bottom: 13px;
     margin: auto;
 }
-
-tr:nth-child(even) {
-    background-color: #dddddd;
+.keyTable{
+    margin-top: 50px;
 }
 
 #left {

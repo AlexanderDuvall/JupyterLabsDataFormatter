@@ -1,6 +1,7 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from "./Table";
+import KeyTable from "./KeyTable";
 
 export class BottomRightTable extends React.Component {
     constructor(props) {
@@ -36,7 +37,6 @@ export class BottomRightTable extends React.Component {
         return (
             <React.Fragment>
                 <div className="rightBody">
-
                     <h3 className={"centerText"}>Title</h3>
                     <div className={"centerInput"}>
                         <input type="text" name="Title" className={"inputBoxLong"} placeholder={"Title"}
@@ -51,7 +51,7 @@ export class BottomRightTable extends React.Component {
                                        checked={this.state.showImage}
                                        onChange={this.showImageHandler}/>
                                 <span className="checkmark"></span>
-                                <h5 className= "labelText">  Show Image?</h5>
+                                <h5 className="labelText"> Show Image?</h5>
                             </label>
                             <img className={this.state.showImage ? "routerImage" : "routerImage hidden"}
                                  src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
@@ -60,6 +60,7 @@ export class BottomRightTable extends React.Component {
                             <Table/>
                         </div>
                     </div>
+                    <KeyTable/>
                     <div className="sideBySide">
                         <div className="TableDivBottom BottomLeft">
                             <Table/>
@@ -67,7 +68,9 @@ export class BottomRightTable extends React.Component {
                         <div className="TableDivBottom BottomRight">
                             <Table/>
                         </div>
+
                     </div>
+
                     <div className={"centerInput"}>
                         <label className={"labelClass"}>Problem Statement</label>
                         <input type={"text"} name={"problemStatement"} className={"inputBoxLong"}

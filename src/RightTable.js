@@ -1,6 +1,7 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from "./Table";
+import KeyTable from "./KeyTable";
 
 
 export class RightTable extends React.Component {
@@ -113,10 +114,7 @@ export class RightTable extends React.Component {
                     <br/>
                     <h3 className={"centerText"}>Problem Info</h3>
                     <div className={"imageToggler"}>
-
-
                     </div>
-
                     <div className="graphicsSelector">
                         <div className="routerImageBottom">
                             <label className="container">
@@ -124,7 +122,7 @@ export class RightTable extends React.Component {
                                        checked={this.state.showImage}
                                        onChange={this.showImageHandler}/>
                                 <span className="checkmark"></span>
-                                <h5 className= "labelText">  Show Image?</h5>
+                                <h5 className="labelText"> Show Image?</h5>
                             </label>
                             <img className={this.state.showImage ? "routerImage" : "routerImage hidden"}
                                  src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
@@ -133,7 +131,7 @@ export class RightTable extends React.Component {
                             <Table/>
                         </div>
                     </div>
-
+                    <KeyTable/>
                     <div className={"centerInput"}>
                         <label className={"labelClass"}>Problem Statement</label>
                         <input type={"text"} name={"problemStatement"} className={"inputBoxLong"}

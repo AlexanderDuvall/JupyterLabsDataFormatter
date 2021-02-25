@@ -1,4 +1,5 @@
 import React, {Fragment} from "react";
+import KeyTable from "./KeyTable";
 
 export class ImageOnly extends React.Component {
     constructor(props) {
@@ -34,6 +35,7 @@ export class ImageOnly extends React.Component {
                                  src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
                         </div>
                     </div>
+                    <KeyTable/>
                 </div>
             </React.Fragment>
         )

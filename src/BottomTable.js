@@ -1,6 +1,7 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from "./Table";
+import KeyTable from "./KeyTable";
 
 
 export class BottomTable extends React.Component {
@@ -62,6 +63,7 @@ export class BottomTable extends React.Component {
                                  src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
                         </div>
                     </div>
+                    <KeyTable/>
                     <div className="sideBySide">
                         <div className="TableDivBottom BottomLeft">
                             <Table/>

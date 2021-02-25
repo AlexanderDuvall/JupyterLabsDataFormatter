@@ -15,7 +15,6 @@ class Table extends React.Component {
         this.tableOptions("Host");
     }
 
-//TODO Add dropdown on tables for predefined data sources. A filter. Like: bridge template will show bridge data only.
 
     renderTable() {
         return <table className="tableSpacing">
@@ -114,9 +113,9 @@ class Table extends React.Component {
     }
 
     renderRows(rows) {
-        let r = [<td>00:1A:C2:7B:00:47</td>];
+        let r = [<td className={"tdFormat"}>00:1A:C2:7B:00:47</td>];
         for (let i = 0; i < rows - 1; i++) {
-            r.push(<td>00:1A:C2:7B:00:47</td>);
+            r.push(<td className={"tdFormat"}>00:1A:C2:7B:00:47</td>);
         }
         return <tr>{r}</tr>;
     }
