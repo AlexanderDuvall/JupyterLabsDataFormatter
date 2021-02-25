@@ -27,6 +27,17 @@ code {
     background: lightblue;
 }
 
+.appendKey {
+    margin-top: 45px;
+}
+
+#KeyTableLabel {
+    width: 200px;
+}
+.tdButton{
+    border: none;
+}
+
 .column {
     width: 120px;
     height: 40px;
@@ -217,22 +228,26 @@ td {
     padding-left: 4px;
     margin: auto;
     font-size: 17px;
-    min-width: 112px;
     padding-right: 20px;
     padding-bottom: 10px;
 }
-.tdFormat{
+
+.tdFormat {
     padding-top: 10px;
     padding-left: 10px;
+    min-width: 112px;
 }
+
 th {
     border: 1px solid #dddddd;
     padding-right: 13px;
     padding-bottom: 13px;
     margin: auto;
 }
-.keyTable{
+
+.keyTable {
     margin-top: 50px;
+
 }
 
 #left {
