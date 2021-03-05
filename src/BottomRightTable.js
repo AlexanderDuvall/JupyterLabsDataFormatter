@@ -2,6 +2,7 @@ import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from "./Table";
 import KeyTable from "./KeyTable";
+import TableHolder from "./TableHolder";
 
 export class BottomRightTable extends React.Component {
     constructor(props) {
@@ -57,16 +58,17 @@ export class BottomRightTable extends React.Component {
                                  src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
                         </div>
                         <div className="TableDiv">
-                            <Table/>
+                     <TableHolder/>
+
                         </div>
                     </div>
                     <KeyTable/>
                     <div className="sideBySide">
                         <div className="TableDivBottom BottomLeft">
-                            <Table/>
+                            <TableHolder/>
                         </div>
                         <div className="TableDivBottom BottomRight">
-                            <Table/>
+                            <TableHolder/>
                         </div>
 
                     </div>

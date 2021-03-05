@@ -10,7 +10,7 @@ class Table extends React.Component {
         this.state = {
             columns: [1, 2,],
             tableType: "Host",
-            tableElements:"-"
+            tableElements: "-"
         }
         this.tableOptions("Host");
     }
@@ -32,7 +32,7 @@ class Table extends React.Component {
     changeSelection(e) {
         let type = e.target.value;
         let elements = this.tableOptions(type)
-        console.log("changing selection: "+type);
+        console.log("changing selection: " + type);
         this.setState({
             type: type,
             tableElements: elements
@@ -123,23 +123,25 @@ class Table extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <select className={"headerSelector"} onChange={ this.changeSelection }>
-                    <option value={"default"}>Select</option>
-                    <option value={"Router"}>Router</option>
-                    <option value={"Host"}>Host</option>
-                    <option value={"Bridge"}>Bridge</option>
-                    <option value={"Gateway"}>Gateway</option>
-                </select>
-                <div className="appendBar">
-                    <div className="blocked">
-                        <button className="Append" onClick={() => this.append()}>
-                            +
-                        </button>
-                        <button className="Append" onClick={() => this.pop()}>
-                            -
-                        </button>
+                <div>
+                    <select className={"headerSelector"} onChange={this.changeSelection}>
+                        <option value={"default"}>Select</option>
+                        <option value={"Router"}>Router</option>
+                        <option value={"Host"}>Host</option>
+                        <option value={"Bridge"}>Bridge</option>
+                        <option value={"Gateway"}>Gateway</option>
+                    </select>
+                    <div className="appendBar">
+                        <div className="blocked">
+                            <button className="Append" onClick={() => this.append()}>
+                                +
+                            </button>
+                            <button className="Append" onClick={() => this.pop()}>
+                                -
+                            </button>
+                        </div>
+                        {this.renderTable()}
                     </div>
-                    {this.renderTable()}
                 </div>
             </React.Fragment>
         )

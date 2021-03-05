@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Add textbox input to KeyTable.js. When second column changes, the third will accordingly. &#10;Bug: Third column doesn't change.">
+      <change afterPath="$PROJECT_DIR$/src/TableHolder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContentEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KeyTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/KeyTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +47,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.16.3" />
-    <property name="javascript.nodejs.core.library.typings.version" value="12.19.16" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.16.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.31" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -131,7 +133,15 @@
       <workItem from="1614129421912" duration="438000" />
       <workItem from="1614129880145" duration="3332000" />
       <workItem from="1614207333694" duration="13174000" />
-      <workItem from="1614268474256" duration="1049000" />
+      <workItem from="1614268474256" duration="2312000" />
+      <workItem from="1614722006411" duration="430000" />
+      <workItem from="1614722635641" duration="628000" />
+      <workItem from="1614885842460" duration="8000" />
+      <workItem from="1614887323277" duration="750000" />
+      <workItem from="1614888269795" duration="260000" />
+      <workItem from="1614892611210" duration="598000" />
+      <workItem from="1614915736599" duration="4611000" />
+      <workItem from="1614960362990" duration="3933000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -231,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614228463559</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Changing category in KeyTable.js also changes options.">
+      <created>1614270211406</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1614270211406</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +282,8 @@
     <MESSAGE value="Added templates for tables. Upon selection of template, column drop down options on the table change." />
     <MESSAGE value="Added KeyTable.js" />
     <MESSAGE value="Add textbox input to KeyTable.js. When second column changes, the third will accordingly. &#10;Bug: Third column doesn't change." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add textbox input to KeyTable.js. When second column changes, the third will accordingly. &#10;Bug: Third column doesn't change." />
+    <MESSAGE value="Changing category in KeyTable.js also changes options." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing category in KeyTable.js also changes options." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

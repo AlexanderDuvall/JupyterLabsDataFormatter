@@ -22,7 +22,18 @@ code {
     padding-bottom: 10px;
     font-size: 22px;
 }
-
+.tablePop{
+    margin-top: 70px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: #ff523a;
+    border: 2px solid black;
+    border-radius: 100px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    color: white;
+}
 .Append:hover {
     background: lightblue;
 }
@@ -181,8 +192,10 @@ code {
 }
 
 .TableDivBottom {
-    width: 100%;
+    width: auto;
     height: auto;
+    border: solid black 1px;
+    padding: 10px;
 }
 
 .TableDiv {
@@ -216,7 +229,7 @@ code {
 
 .BottomRight {
     float: right;
-    margin-left: 200px;
+    margin-left: 250px;
 }
 
 .l2Header {
