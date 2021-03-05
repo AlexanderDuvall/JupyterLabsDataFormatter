@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Add textbox input to KeyTable.js. When second column changes, the third will accordingly. &#10;Bug: Third column doesn't change.">
-      <change afterPath="$PROJECT_DIR$/src/TableHolder.js" afterDir="false" />
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Can now append tables. Appending works, popping tables at an index doesn't work. Not formatted.">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TableHolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableHolder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +140,7 @@
       <workItem from="1614888269795" duration="260000" />
       <workItem from="1614892611210" duration="598000" />
       <workItem from="1614915736599" duration="4611000" />
-      <workItem from="1614960362990" duration="3933000" />
+      <workItem from="1614960362990" duration="6797000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -248,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614270211406</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Can now append tables. Appending works, popping tables at an index doesn't work. Not formatted.">
+      <created>1614966633390</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1614966633390</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +289,8 @@
     <MESSAGE value="Added KeyTable.js" />
     <MESSAGE value="Add textbox input to KeyTable.js. When second column changes, the third will accordingly. &#10;Bug: Third column doesn't change." />
     <MESSAGE value="Changing category in KeyTable.js also changes options." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing category in KeyTable.js also changes options." />
+    <MESSAGE value="Can now append tables. Appending works, popping tables at an index doesn't work. Not formatted." />
+    <option name="LAST_COMMIT_MESSAGE" value="Can now append tables. Appending works, popping tables at an index doesn't work. Not formatted." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

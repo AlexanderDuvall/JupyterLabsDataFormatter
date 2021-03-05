@@ -45,8 +45,8 @@ class TableHolder extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <button className="Append" onClick={() => this.append()}>
-                    +
+                <button className="tableAppend" onClick={() => this.append()}>
+                    Append Table
                 </button>
                 {this.state.list.map(d => (
                     <li className="list-unstyled">

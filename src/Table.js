@@ -27,6 +27,7 @@ class Table extends React.Component {
             {this.renderRows(this.state.columns.length)}
             </tbody>
         </table>
+
     }
 
     changeSelection(e) {
@@ -124,13 +125,17 @@ class Table extends React.Component {
         return (
             <React.Fragment>
                 <div>
-                    <select className={"headerSelector"} onChange={this.changeSelection}>
-                        <option value={"default"}>Select</option>
-                        <option value={"Router"}>Router</option>
-                        <option value={"Host"}>Host</option>
-                        <option value={"Bridge"}>Bridge</option>
-                        <option value={"Gateway"}>Gateway</option>
-                    </select>
+                    <div className="tablePadding">
+                        <select className={"headerSelector"} onChange={this.changeSelection}>
+                            <option value={"default"}>Select</option>
+                            <option value={"Router"}>Router</option>
+                            <option value={"Host"}>Host</option>
+                            <option value={"Bridge"}>Bridge</option>
+                            <option value={"Gateway"}>Gateway</option>
+                        </select>
+                        <input type={"text"} name={"problemStatement"} className={"tableInputBox"}
+                               placeholder={"Table Title"}/>
+                    </div>
                     <div className="appendBar">
                         <div className="blocked">
                             <button className="Append" onClick={() => this.append()}>
