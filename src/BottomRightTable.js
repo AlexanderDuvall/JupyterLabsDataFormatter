@@ -33,8 +33,7 @@ export class BottomRightTable extends React.Component {
             showImage: value
         })
     }
-
-    render() {
+     render() {
         return (
             <React.Fragment>
                 <div className="rightBody">
@@ -61,7 +60,6 @@ export class BottomRightTable extends React.Component {
                             <TableHolder/>
                         </div>
                     </div>
-                    <KeyTable/>
                     <div className="sideBySide">
                         <div className="TableDivBottom BottomLeft">
                             <TableHolder/>
@@ -69,9 +67,8 @@ export class BottomRightTable extends React.Component {
                         <div className="TableDivBottom BottomRight">
                             <TableHolder/>
                         </div>
-
                     </div>
-
+                    <KeyTable/>
                     <div className={"centerInput"}>
                         <label className={"labelClass"}>Problem Statement</label>
                         <input type={"text"} name={"problemStatement"} className={"inputBoxLong"}

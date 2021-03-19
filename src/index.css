@@ -340,7 +340,24 @@ th {
     height: 0;
     width: 0;
 }
-
+.checkMarkContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+.customCheckmarkLabel{
+    margin-left: 180px;
+}
+.rightColumnButtons{
+    width: 135px;
+    height: 36px;
+    margin-top: 10px;
+    margin-left: 16px;
+    background: aliceblue;
+}
 /* Create a custom checkbox */
 .checkmark {
     position: absolute;

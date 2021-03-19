@@ -1,16 +1,44 @@
 import React from "react";
+import {Button, Modal} from "react-bootstrap";
 
 class KeyTable extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tableValues: []
+            tableValues: [],
+            showModal: false,
+            title: "",
+            body: <React.Fragment><h1>asdf</h1></React.Fragment>
         }
         this.removeObjFromArray = this.removeObjFromArray.bind(this);
         this.addRow = this.addRow.bind(this);
         this.constructOptions = this.constructOptions.bind(this);
         this.changeOption = this.changeOption.bind(this);
         this.constructDropdown = this.constructDropdown.bind(this);
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
+        this.unHideModal = this.unHideModal.bind(this);
+    }
+
+    hideModal() {
+        this.setState({showModal: false});
+    }
+
+    showModal() {
+        console.log("Showing the modal " + this.state.showModal);
+        return (
+            <Modal show={this.state.showModal} onHide={() => this.hideModal()}>
+                <Modal.Header closeButton>
+                    <Modal.Title>{this.state.title}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>{this.state.body}</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => this.hideModal()}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        )
     }
 
     removeObjFromArray(index) {
@@ -39,7 +67,8 @@ class KeyTable extends React.Component {
     }
 
     constructOptions(i) {
-        return <select onChange={(e) => this.changeOption(e, i)} className={"headerSelector"}>
+        return <select onChange={(e) => this.changeOption(e, i)}
+                       className={"headerSelector"}>
             <option selected value={"host"}>Host</option>
             <option value={"bridge"}>Bridge</option>
             <option value={"gateway"}>Gateway</option>
@@ -47,36 +76,74 @@ class KeyTable extends React.Component {
         </select>
     }
 
+    unHideModal(type, title) {
+        let body = <React.Fragment>
+
+            <label className="container">
+                <h4 className={"customCheckmarkLabel"}>Option1</h4>
+                <input type="checkbox"/>
+                <span className="checkmark"></span>
+            </label>
+
+            <label className="container">
+                <h4 className={"customCheckmarkLabel"}>Option2</h4>
+                <input type="checkbox"/>
+                <span className="checkmark"></span>
+            </label>
+
+            <label className="container">
+                <h4 className={"customCheckmarkLabel"}>Option3</h4>
+                <input type="checkbox"/>
+                <span className="checkmark"></span>
+            </label>
+
+            <label className="container">
+                <h4 className={"customCheckmarkLabel"}>Option4</h4>
+                <input type="checkbox"/>
+                <span className="checkmark"></span>
+            </label>
+        </React.Fragment>
+        this.setState(
+            {
+                showModal: true,
+                body: body,
+                title: title
+            }
+        )
+    }
+
     constructDropdown(param) {
         console.log("constructing with: " + param + "_");
+        this.showModal();
         switch (param) {
             case "host":
                 console.log("host.....")
-                return <select className={"headerSelector"}>
-                    <option>Host stuff</option>
-                </select>
+                return <button className={"rightColumnButtons"} onClick={() => this.unHideModal()}>
+                    Options
+                </button>
             case "bridge":
                 console.log("bridge.....")
-                return <select className={"headerSelector"}>
-                    <option>Bridge stuff</option>
-                </select>
+                return <button className={"rightColumnButtons"} onClick={() => this.unHideModal()}>
+                    Options
+                </button>
             case "router":
                 console.log("router.....")
-                return <select className={"headerSelector"}>
-                    <option>Router stuff</option>
-                </select>
+                return <button className={"rightColumnButtons"} onClick={() => this.unHideModal()}>
+                    Options
+                </button>
             case "gateway":
                 console.log("gateway.....")
-                return <select className={"headerSelector"}>
-                    <option>Gateway stuff</option>
-                </select>
+                return <button className={"rightColumnButtons"} onClick={() => this.unHideModal()}>
+                    Options
+                </button>
             default:
                 console.log(".....default")
-                return <select className={"headerSelector"}>
-                    <option>default stuff</option>
-                </select>
+                return <button className={"rightColumnButtons"} onClick={() => this.unHideModal()}>
+                    Options
+                </button>
         }
-    };
+    }
+    ;
 
     constructTable() {
         let variables = this.state.tableValues;
@@ -106,6 +173,7 @@ class KeyTable extends React.Component {
     render() {
         return (
             <React.Fragment>
+                {this.showModal()}
                 <div className="keyTable">
                     <div className="imageToggler">
                         <button className="Append appendKey" onClick={() => this.addRow()}>
