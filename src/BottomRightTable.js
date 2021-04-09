@@ -1,6 +1,5 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Table from "./Table";
 import KeyTable from "./KeyTable";
 import TableHolder from "./TableHolder";
 
@@ -8,10 +7,18 @@ export class BottomRightTable extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            showImage: true
+            imageFormats: ["default-neato.png", "default-circo.png", "stp-dot.png", "stp-circo-nohost.png","stp-dot-nohost.png","stp-neato-nohost.png"],
+            showImage: true,
+            currentImage: "default-neato.png",
+            select: ""
         };
+        this.setupImageArray = this.setupImageArray.bind(this);
         this.showImageHandler = this.showImageHandler.bind(this);
+        this.changeImage = this.changeImage.bind(this);
+    }
 
+    componentDidMount() {
+        this.setupImageArray();
     }
 
     onTitleChange(event) {
@@ -31,9 +38,33 @@ export class BottomRightTable extends React.Component {
         const value = target.checked;
         this.setState({
             showImage: value
+        });
+
+    }
+
+    changeImage(event) {
+        let val = event.target.value;
+        this.setState({
+            currentImage:val
         })
     }
-     render() {
+
+    setupImageArray() {
+        let images = this.state.imageFormats
+        let a = [<option value={images[0]}>{images[0]}</option>];
+        for (let i = 1; i < images.length; i++) {
+            a.push(<option value={images[i]}>{images[i]}</option>);
+        }
+        let af = <select className={"headerSelector"}
+                         onChange={this.changeImage}>
+            {a}
+        </select>;
+        this.setState({
+            select: af
+        })
+    }
+
+    render() {
         return (
             <React.Fragment>
                 <div className="rightBody">
@@ -46,15 +77,19 @@ export class BottomRightTable extends React.Component {
                     <h3 className={"centerText"}>Problem Info</h3>
                     <div className="graphicsSelector">
                         <div className="routerImageBottom">
-                            <label className="container">
-                                <input type="checkbox"
-                                       checked={this.state.showImage}
-                                       onChange={this.showImageHandler}/>
-                                <span className="checkmark"></span>
-                                <h5 className="labelText"> Show Image?</h5>
-                            </label>
+                            <div className="tablePadding">
+                                <label className="container">
+                                    <input type="checkbox"
+                                           checked={this.state.showImage}
+                                           onChange={this.showImageHandler}/>
+                                    <span className="checkmark"></span>
+                                    <h5 className="labelText"> Show Image?</h5>
+                                </label>
+                                {this.state.select}
+                            </div>
+
                             <img className={this.state.showImage ? "routerImage" : "routerImage hidden"}
-                                 src="https://img-en.fs.com/community/wp-content/uploads/2017/10/How-routers-route-packets-from-the-source-to-the-destination.jpg"/>
+                                 src={this.state.currentImage}/>
                         </div>
                         <div className="TableDiv">
                             <TableHolder/>

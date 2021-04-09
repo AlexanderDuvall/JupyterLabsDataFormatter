@@ -311,7 +311,7 @@ th {
 /*  ----------------------------------------------------------------------------------------------------------  */
 /* Customize the label (the container) */
 .container {
-    width: 100%;
+    width: 28%;
     padding-right: 15px;
     margin-left: auto;
     float: left;

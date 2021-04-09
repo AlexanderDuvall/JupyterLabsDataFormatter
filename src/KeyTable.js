@@ -80,7 +80,7 @@ class KeyTable extends React.Component {
         let body = <React.Fragment>
 
             <label className="container">
-                <h4 className={"customCheckmarkLabel"}>Option1</h4>
+                <h4 className={"customCheckmarkLabel"}>Show Renderer</h4>
                 <input type="checkbox"/>
                 <span className="checkmark"></span>
             </label>

@@ -1,4 +1,7 @@
 import React from "react";
+//TODO above image add image options with things like show graph... Add renderer, change image etc.
+//TODO Save to JSON file or just a file
+//Add Tabs to solution set
 
 class Table extends React.Component {
     constructor(props) {

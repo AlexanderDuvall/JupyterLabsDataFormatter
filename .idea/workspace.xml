@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Tables formatted better.">
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added checkbox option modal on key table">
+      <change afterPath="$PROJECT_DIR$/public/default-circo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/default-neato.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stp-circo-nohost.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stp-dot-nohost.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stp-dot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stp-neato-nohost.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContentEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/KeyTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/KeyTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
@@ -67,6 +72,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alexa\WebstormProjects\jupyterlabscreator\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alexa\WebstormProjects\jupyterlabscreator\public" />
+      <recent name="C:\Users\alexa\WebstormProjects\jupyterlabscreator" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -144,7 +153,10 @@
       <workItem from="1614915736599" duration="4611000" />
       <workItem from="1614960362990" duration="6834000" />
       <workItem from="1614979150695" duration="1908000" />
-      <workItem from="1616106570561" duration="8911000" />
+      <workItem from="1616106570561" duration="9552000" />
+      <workItem from="1616182427775" duration="3925000" />
+      <workItem from="1616789104367" duration="1058000" />
+      <workItem from="1617977931204" duration="4687000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -265,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614969514790</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added checkbox option modal on key table">
+      <created>1616118623393</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1616118623393</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +321,8 @@
     <MESSAGE value="Changing category in KeyTable.js also changes options." />
     <MESSAGE value="Can now append tables. Appending works, popping tables at an index doesn't work. Not formatted." />
     <MESSAGE value="Tables formatted better." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tables formatted better." />
+    <MESSAGE value="Added checkbox option modal on key table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added checkbox option modal on key table" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
