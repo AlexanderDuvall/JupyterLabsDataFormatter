@@ -26,6 +26,7 @@ class LeftSelector extends React.Component {
             templates: updatedTemplate
         });
         console.log("uptop...." + id + "...." + data.inspect);
+
     }
 
     goToView(identifier) {

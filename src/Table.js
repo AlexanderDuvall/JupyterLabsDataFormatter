@@ -19,6 +19,15 @@ class Table extends React.Component {
 
 
     renderTable() {
+        let data = {
+            "Table": {
+                "type": this.state.type,
+                "columns": this.state.columns,
+                "tableElements": this.state.tableElements
+            }
+        }
+        this.props.savedata(this.props.number, data)
+        console.log("slinning")
         return <table className="tableSpacing">
             <thead>
             <tr>
@@ -63,7 +72,6 @@ class Table extends React.Component {
         }
         this.props.savedata(this.props.number, data)
     }
-
     append(e) {
         let a = this.state.columns;
         if (a.length !== 4) {

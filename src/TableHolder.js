@@ -12,6 +12,12 @@ class TableHolder extends React.Component {
         this.pop = this.pop.bind(this);
         this.saveParentData = this.saveParentData.bind(this);
     }
+componentDidUpdate(prevProps, prevState, snapshot) {
+    let data = {
+        "Tables": this.state.content
+    };
+    this.props.saveDataTable(data);
+}
 
     componentWillUnmount() {
         let data = {
@@ -19,11 +25,6 @@ class TableHolder extends React.Component {
         };
         this.props.saveDataTable(data);
     }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-
-    }
-
     getTables() {
         return this.state.list;
     }
@@ -34,6 +35,11 @@ class TableHolder extends React.Component {
         this.setState({
             content: list
         })
+        let data = {
+            "Tables": this.state.content
+        };
+        console.log("hoto life")
+        this.props.saveDataTable(data);
     }
 
     append() {
@@ -62,6 +68,7 @@ class TableHolder extends React.Component {
             "Tables": this.state.content
         };
         this.props.saveDataTable(data);
+        console.log("boonkgang")
     }
 
     pop(index) {

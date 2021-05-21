@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Can change image with a dropdown and list of other images.">
-      <change afterPath="$PROJECT_DIR$/public/test.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JSONReader.js" afterDir="false" />
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Can now uplift state to form a JSON. Does not properly, work. The table data is not filled.">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContentEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LeftSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeftSelector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TableHolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableHolder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +47,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.16.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.31" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.0" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -159,7 +154,9 @@
       <workItem from="1617983200746" duration="2475000" />
       <workItem from="1617999083406" duration="712000" />
       <workItem from="1621204644834" duration="9734000" />
-      <workItem from="1621547504201" duration="13789000" />
+      <workItem from="1621547504201" duration="13951000" />
+      <workItem from="1621563875851" duration="4310000" />
+      <workItem from="1621625819353" duration="1606000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -294,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617982737753</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Can now uplift state to form a JSON. Does not properly, work. The table data is not filled.">
+      <created>1621563293264</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1621563293264</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +337,32 @@
     <MESSAGE value="Tables formatted better." />
     <MESSAGE value="Added checkbox option modal on key table" />
     <MESSAGE value="Can change image with a dropdown and list of other images." />
-    <option name="LAST_COMMIT_MESSAGE" value="Can change image with a dropdown and list of other images." />
+    <MESSAGE value="Can now uplift state to form a JSON. Does not properly, work. The table data is not filled." />
+    <option name="LAST_COMMIT_MESSAGE" value="Can now uplift state to form a JSON. Does not properly, work. The table data is not filled." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/TableHolder.js</url>
+          <line>18</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/TableHolder.js</url>
+          <line>69</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/TableHolder.js</url>
+          <line>70</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -46,27 +46,32 @@ export class Editor extends React.Component {
         let a = event.target.value;
         if (a === "BottomRightTable") {
             this.setState({
-                template: <BottomRightTable saveData = {this.saveParentDataFunction}/>
+                template: <BottomRightTable saveData = {()=>this.saveParentDataFunction}/>
             })
         } else if (a === "BottomTable") {
             this.setState({
-                template: <BottomTable saveData = {this.saveParentDataFunction}/>
+                template: <BottomTable saveData = {()=>this.saveParentDataFunction}/>
             })
         } else if (a === "RightTable") {
             this.setState({
-                template: <RightTable saveData = {this.saveParentDataFunction}/>
+                template: <RightTable saveData = {()=>this.saveParentDataFunction}/>
             })
         } else if (a === "ImageOnly") {
             this.setState({
-                template: <ImageOnly saveData = {this.saveParentDataFunction}/>
+                template: <ImageOnly saveData = {()=>this.saveParentDataFunction}/>
             })
         }
+        console.log("template selected bitch")
     }
 
     saveParentDataFunction(data) {
         this.setState({
             tableHolderData:data
         })
+        let id = this.props.data.identifier;
+        let hash = this.buildhash();
+        this.props.saveFinalData(id, hash);
+        console.log("123455")
     }
 
     buildhash() {

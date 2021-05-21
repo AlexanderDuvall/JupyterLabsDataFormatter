@@ -4,6 +4,35 @@ import KeyTable from "./KeyTable";
 import TableHolder from "./TableHolder";
 
 export class BottomRightTable extends React.Component {
+    saveBottomLeftTable(data) {
+        let contents = this.state.contents;
+        console.log("111111")
+        contents["BottomLeft"] = data
+        this.setState({
+            contents: data
+        })
+        this.props.saveData(this.state.contents)
+    }
+
+    saveBottomRightTable(data) {
+        let contents = this.state.contents;
+        console.log("111111")
+        contents["BottomRight"] = data
+        this.setState({
+            contents: contents
+        })
+        this.props.saveData(this.state.contents)
+    }
+
+    saveRightTable(data) {
+        let contents = this.state.contents;
+        console.log("111111")
+        contents["RightTable"] = data
+        this.setState({
+            contents: contents
+        })
+        this.props.saveData(this.state.contents)
+    }
     constructor(props) {
         super(props);
         this.state = {
@@ -32,31 +61,10 @@ export class BottomRightTable extends React.Component {
         this.setupImageArray();
     }
 
-    saveBottomLeftTable(data) {
-        let contents = this.state.contents;
-        contents["BottomLeft"] = data
-        this.setState({
-            contents: data
-        })
-    }
 
-    saveBottomRightTable(data) {
-        let contents = this.state.contents;
-        contents["BottomRight"] = data
-        this.setState({
-            contents: contents
-        })
-    }
-
-    saveRightTable(data) {
-        let contents = this.state.contents;
-        contents["RightTable"] = data
-        this.setState({
-            contents: contents
-        })
-    }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log("so it updated...what now?")
         this.props.saveData(this.state.contents)
     }
 
