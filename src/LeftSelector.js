@@ -25,7 +25,7 @@ class LeftSelector extends React.Component {
         this.setState({
             templates: updatedTemplate
         });
-        console.log("uptop...." + id + "...." + data.template.type.name);
+        console.log("uptop...." + id + "...." + data.inspect);
     }
 
     goToView(identifier) {
@@ -70,6 +70,51 @@ class LeftSelector extends React.Component {
             templates: templates
         })
         this.renderViews();
+       // this.saveAll()
+
+    }
+
+    saveAll() {
+        let templates = this.state.templates;
+        let body = {};
+        for (let i = 0; i < templates.length; templates++) {
+            let t = templates[i];
+            let tableFormat = t.state.template;
+            let editor = tableFormat.getTemplate();
+            let tableHolders = editor.getTableHolders();
+            let bottomLeftTables = tableHolders.bottomLeftTable.getTables();
+            let bottomRightTables = tableHolders.bottomRightTable.getTables();
+            let rightTables = tableHolders.rightTable.getTables();
+            let brt = {};
+            let rt = {};
+            let blt = {};
+            for (let i = 0; i < bottomLeftTables.length; i++) {
+                let table = bottomLeftTables[i];
+                let preset = table.state.tableElements;
+                let columnCount = table.state.columns.length;
+                blt.push({"present": preset, "columnCount": columnCount, "name": "TO_BE_ADDED"})
+            }
+            for (let i = 0; i < bottomRightTables.length; i++) {
+                let table = bottomLeftTables[i];
+                let preset = table.state.tableElements;
+                let columnCount = table.state.columns.length;
+                brt.push({"present": preset, "columnCount": columnCount, "name": "TO_BE_ADDED"})
+            }
+            for (let i = 0; i < rightTables.length; i++) {
+                let table = bottomLeftTables[i];
+                let preset = table.state.tableElements;
+                let columnCount = table.state.columns.length;
+                rt.push({"present": preset, "columnCount": columnCount, "name": "TO_BE_ADDED"})
+            }
+            body.push({
+                "template": tableFormat, "Tables": {
+                    "BottomRightTables": brt,
+                    "BottomLeftTables": blt,
+                    "RightTable": rt
+                }
+            })
+        }
+
     }
 
     render() {

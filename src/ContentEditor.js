@@ -14,7 +14,7 @@ class ContentEditor extends React.Component {
     }
 
     componentWillUnmount() {
-        this.props.saveNewData(this.state.columnContent, this.state.content);
+        // this.props.saveNewData(this.state.columnContent, this.state.content);
     }
 
     saveContent(event, key) {

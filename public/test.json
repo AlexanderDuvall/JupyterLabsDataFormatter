@@ -1,0 +1,9 @@
+{"version" : 1,
+ "name" : "graph-display",
+ "_schema" : 
+   {
+     "type" : {"type" : "select", "values" : ["stp", "default"], "required" : True},
+     "engine" : {"type" : "select", "values" : ["neato", "circo", "twopi", "dot"], "required" : True},
+     "host-label" : {"type" : "boolean", "default" : True, "required" : False}
+   }
+}

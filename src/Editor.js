@@ -12,16 +12,19 @@ export class Editor extends React.Component {
         let data = this.props.data
         this.state = {
             template: data.template,
-            columnContent: data.columnContent,
-            content: data.content
+            tableHolderData: {}
         }
-        this.saveData = this.saveData.bind(this);
         this.selectTemplateType = this.selectTemplateType.bind(this);
+        this.saveParentDataFunction = this.saveParentDataFunction.bind(this);
+    }
+
+    getTemplate() {
+        return this.state.template;
     }
 
     componentDidMount() {
         let data = this.props.data;
-        console.log(data.identifier+".........")
+        console.log(data.identifier + ".........")
     }
 
     componentWillUnmount() {
@@ -31,56 +34,51 @@ export class Editor extends React.Component {
         this.props.saveFinalData(id, hash);
     }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        let id = this.props.data.identifier;
+        let hash = this.buildhash();
+        console.log(hash);
+        this.props.saveFinalData(id, hash);
+        console.log("updating!!! " + id + "...." + this.state.template.type.name);
+    }
+
     selectTemplateType(event) {
-        let func = () => {
-            let id = this.props.data.identifier;
-            let hash = this.buildhash();
-            console.log(hash);
-            this.props.saveFinalData(id, hash);
-            console.log("updating!!! "+id+"...." + this.state.template.type.name);
-        }
         let a = event.target.value;
         if (a === "BottomRightTable") {
             this.setState({
-                template: <BottomRightTable/>
+                template: <BottomRightTable saveData = {this.saveParentDataFunction}/>
             })
-            func();
         } else if (a === "BottomTable") {
             this.setState({
-                template: <BottomTable/>
+                template: <BottomTable saveData = {this.saveParentDataFunction}/>
             })
-            func();
         } else if (a === "RightTable") {
             this.setState({
-                template: <RightTable/>
+                template: <RightTable saveData = {this.saveParentDataFunction}/>
             })
-            func();
         } else if (a === "ImageOnly") {
             this.setState({
-                template: <ImageOnly/>
+                template: <ImageOnly saveData = {this.saveParentDataFunction}/>
             })
-            func();
         }
+    }
+
+    saveParentDataFunction(data) {
+        this.setState({
+            tableHolderData:data
+        })
     }
 
     buildhash() {
         let data = {
             template: this.state.template,
-            columnContent: this.state.columnContent,
-            content: this.state.content
+            tableHolderData: this.state.tableHolderData
         };
         console.log(data);
         console.log("mhmmm")
         return data;
     }
 
-    saveData(columnContent, content) {
-        this.setState({
-            columnContent: columnContent,
-            content: content
-        });
-
-    }
 
     selected(temp) {
         console.log("comparing..." + this.state.template.type.name)
@@ -105,7 +103,7 @@ export class Editor extends React.Component {
             <React.Fragment>
                 {this.Selector()}
                 {this.state.template}
-                <ContentEditor saveNewData={this.saveData}/>
+                <ContentEditor/>
             </React.Fragment>
         )
     };

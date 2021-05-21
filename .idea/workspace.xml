@@ -4,20 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added checkbox option modal on key table">
-      <change afterPath="$PROJECT_DIR$/public/default-circo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/default-neato.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/stp-circo-nohost.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/stp-dot-nohost.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/stp-dot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/stp-neato-nohost.png" afterDir="false" />
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Can change image with a dropdown and list of other images.">
+      <change afterPath="$PROJECT_DIR$/public/test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/JSONReader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ContentEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KeyTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/KeyTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeftSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeftSelector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TableHolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableHolder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +155,11 @@
       <workItem from="1616106570561" duration="9552000" />
       <workItem from="1616182427775" duration="3925000" />
       <workItem from="1616789104367" duration="1058000" />
-      <workItem from="1617977931204" duration="4687000" />
+      <workItem from="1617977931204" duration="4771000" />
+      <workItem from="1617983200746" duration="2475000" />
+      <workItem from="1617999083406" duration="712000" />
+      <workItem from="1621204644834" duration="9734000" />
+      <workItem from="1621547504201" duration="13789000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -284,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616118623393</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Can change image with a dropdown and list of other images.">
+      <created>1617982737753</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1617982737753</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +332,8 @@
     <MESSAGE value="Can now append tables. Appending works, popping tables at an index doesn't work. Not formatted." />
     <MESSAGE value="Tables formatted better." />
     <MESSAGE value="Added checkbox option modal on key table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added checkbox option modal on key table" />
+    <MESSAGE value="Can change image with a dropdown and list of other images." />
+    <option name="LAST_COMMIT_MESSAGE" value="Can change image with a dropdown and list of other images." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

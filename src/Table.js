@@ -10,8 +10,8 @@ class Table extends React.Component {
         this.pop = this.pop.bind(this);
         this.changeSelection = this.changeSelection.bind(this);
         this.state = {
+            type: "",
             columns: [1, 2,],
-            tableType: "Host",
             tableElements: "-"
         }
         this.tableOptions("Host");
@@ -40,6 +40,28 @@ class Table extends React.Component {
             type: type,
             tableElements: elements
         })
+    }
+
+    componentWillUnmount() {
+        let data = {
+            "Table": {
+                "type": this.state.type,
+                "columns": this.state.columns,
+                "tableElements": this.state.tableElements
+            }
+        }
+        this.props.savedata(this.props.number, data)
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        let data = {
+            "Table": {
+                "type": this.state.type,
+                "columns": this.state.columns,
+                "tableElements": this.state.tableElements
+            }
+        }
+        this.props.savedata(this.props.number, data)
     }
 
     append(e) {

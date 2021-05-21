@@ -7,18 +7,74 @@ export class BottomRightTable extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            imageFormats: ["default-neato.png", "default-circo.png", "stp-dot.png", "stp-circo-nohost.png","stp-dot-nohost.png","stp-neato-nohost.png"],
+            imageFormats: ["default-neato.png", "default-circo.png", "stp-dot.png", "stp-circo-nohost.png", "stp-dot-nohost.png", "stp-neato-nohost.png"],
             showImage: true,
             currentImage: "default-neato.png",
-            select: ""
+            select: "",
+            rightTable: <TableHolder saveDataTable={() => this.saveRightTable}/>,
+            bottomRightTable: <TableHolder saveDataTable={() => this.saveBottomRightTable}/>,
+            bottomLeftTable: <TableHolder saveDataTable={() => this.saveBottomLeftTable}/>,
+            contents: {
+                "BottomLeft": "",
+                "BottomRight": "",
+                "RightTable": ""
+            }
         };
         this.setupImageArray = this.setupImageArray.bind(this);
         this.showImageHandler = this.showImageHandler.bind(this);
         this.changeImage = this.changeImage.bind(this);
+        this.saveRightTable = this.saveRightTable.bind(this);
+        this.saveBottomRightTable = this.saveBottomRightTable.bind(this);
+        this.saveBottomLeftTable = this.saveBottomLeftTable.bind(this);
     }
 
     componentDidMount() {
         this.setupImageArray();
+    }
+
+    saveBottomLeftTable(data) {
+        let contents = this.state.contents;
+        contents["BottomLeft"] = data
+        this.setState({
+            contents: data
+        })
+    }
+
+    saveBottomRightTable(data) {
+        let contents = this.state.contents;
+        contents["BottomRight"] = data
+        this.setState({
+            contents: contents
+        })
+    }
+
+    saveRightTable(data) {
+        let contents = this.state.contents;
+        contents["RightTable"] = data
+        this.setState({
+            contents: contents
+        })
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        this.props.saveData(this.state.contents)
+    }
+
+    componentWillUnmount() {
+        this.props.saveData(this.state.contents)
+    }
+
+    getCurrentImage() {
+        return this.state.currentImage;
+    }
+
+    getTableHolders() {
+        let th = {
+            rightTable: this.state.rightTable,
+            bottomRightTable: this.state.bottomRightTable,
+            bottomLeftTable: this.state.bottomLeftTable
+        }
+        return th;
     }
 
     onTitleChange(event) {
@@ -45,7 +101,7 @@ export class BottomRightTable extends React.Component {
     changeImage(event) {
         let val = event.target.value;
         this.setState({
-            currentImage:val
+            currentImage: val
         })
     }
 
@@ -92,15 +148,15 @@ export class BottomRightTable extends React.Component {
                                  src={this.state.currentImage}/>
                         </div>
                         <div className="TableDiv">
-                            <TableHolder/>
+                            {this.state.rightTable}
                         </div>
                     </div>
                     <div className="sideBySide">
                         <div className="TableDivBottom BottomLeft">
-                            <TableHolder/>
+                            {this.state.bottomLeftTable}
                         </div>
                         <div className="TableDivBottom BottomRight">
-                            <TableHolder/>
+                            {this.state.bottomRightTable}
                         </div>
                     </div>
                     <KeyTable/>

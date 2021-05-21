@@ -6,17 +6,45 @@ class TableHolder extends React.Component {
         super(props);
         this.state = {
             list: [],
+            content: []
         }
         this.append = this.append.bind(this);
         this.pop = this.pop.bind(this);
+        this.saveParentData = this.saveParentData.bind(this);
+    }
+
+    componentWillUnmount() {
+        let data = {
+            "Tables": this.state.content
+        };
+        this.props.saveDataTable(data);
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+
+    }
+
+    getTables() {
+        return this.state.list;
+    }
+
+    saveParentData(id, tableData) {
+        let list = this.state.content;
+        list[id] = tableData
+        this.setState({
+            content: list
+        })
     }
 
     append() {
         let tables = this.state.list;
+        let dataList = this.state.list;
         let k = tables.length - 1
-        tables.push({"table": <Table/>, "number": k});
+        tables.push({"table": <Table savedata={()=>this.saveParentData}/>, "number": k});
+        dataList.push("")
         this.setState({
-            list: tables
+            list: tables,
+            content: dataList,
         });
         console.log("appending to holder" + this.state.list.length);
         this.reKey();
@@ -28,8 +56,12 @@ class TableHolder extends React.Component {
             tables.number = i;
         }
         this.setState({
-            list:tables
+            list: tables
         });
+        let data = {
+            "Tables": this.state.content
+        };
+        this.props.saveDataTable(data);
     }
 
     pop(index) {
@@ -39,7 +71,7 @@ class TableHolder extends React.Component {
         this.setState({
             list: tables
         })
-        console.log("popping @ " +index);
+        console.log("popping @ " + index);
     }
 
     render() {
@@ -52,7 +84,7 @@ class TableHolder extends React.Component {
                     <li className="list-unstyled">
                         <div className="appendBar">
                             {d.table}
-                            <button className="tablePop" onClick={() => this.pop(parseInt(d.number+1))}>
+                            <button className="tablePop" onClick={() => this.pop(parseInt(d.number + 1))}>
                                 -
                             </button>
                         </div>
