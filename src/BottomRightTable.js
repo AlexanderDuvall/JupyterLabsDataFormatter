@@ -4,35 +4,6 @@ import KeyTable from "./KeyTable";
 import TableHolder from "./TableHolder";
 
 export class BottomRightTable extends React.Component {
-    saveBottomLeftTable(data) {
-        let contents = this.state.contents;
-        console.log("111111")
-        contents["BottomLeft"] = data
-        this.setState({
-            contents: data
-        })
-        this.props.saveData(this.state.contents)
-    }
-
-    saveBottomRightTable(data) {
-        let contents = this.state.contents;
-        console.log("111111")
-        contents["BottomRight"] = data
-        this.setState({
-            contents: contents
-        })
-        this.props.saveData(this.state.contents)
-    }
-
-    saveRightTable(data) {
-        let contents = this.state.contents;
-        console.log("111111")
-        contents["RightTable"] = data
-        this.setState({
-            contents: contents
-        })
-        this.props.saveData(this.state.contents)
-    }
     constructor(props) {
         super(props);
         this.state = {
@@ -40,9 +11,9 @@ export class BottomRightTable extends React.Component {
             showImage: true,
             currentImage: "default-neato.png",
             select: "",
-            rightTable: <TableHolder saveDataTable={() => this.saveRightTable}/>,
-            bottomRightTable: <TableHolder saveDataTable={() => this.saveBottomRightTable}/>,
-            bottomLeftTable: <TableHolder saveDataTable={() => this.saveBottomLeftTable}/>,
+            rightTable: <TableHolder reference={this} saveDataTable={() => this.saveRightTable}/>,
+            bottomRightTable: <TableHolder reference={this} saveDataTable={() => this.saveBottomRightTable}/>,
+            bottomLeftTable: <TableHolder reference={this} saveDataTable={this.saveBottomLeftTable}/>,
             contents: {
                 "BottomLeft": "",
                 "BottomRight": "",
@@ -57,10 +28,40 @@ export class BottomRightTable extends React.Component {
         this.saveBottomLeftTable = this.saveBottomLeftTable.bind(this);
     }
 
+    saveBottomLeftTable(data, reference) {
+        let update = reference.state.contents;
+        console.log("111111")
+        update["BottomLeft"] = data
+        reference.setState({
+            contents: update
+        })
+        reference.props.saveData(reference.state.contents)
+    }
+
+    saveBottomRightTable(data, reference) {
+        let update = reference.state.contents;
+        console.log("111111")
+        update["BottomRight"] = data
+        reference.setState({
+            contents: update
+        })
+        reference.props.saveData(reference.state.contents)
+    }
+
+    saveRightTable(data, reference) {
+        let update = reference.state.contents;
+        console.log("111111")
+        update["RightTable"] = data
+        reference.setState({
+            contents: update
+        })
+        reference.props.saveData(reference.state.contents)
+    }
+
+
     componentDidMount() {
         this.setupImageArray();
     }
-
 
 
     componentDidUpdate(prevProps, prevState, snapshot) {

@@ -16,14 +16,14 @@ componentDidUpdate(prevProps, prevState, snapshot) {
     let data = {
         "Tables": this.state.content
     };
-    this.props.saveDataTable(data);
+    this.props.saveDataTable(data,this.props.reference);
 }
 
     componentWillUnmount() {
         let data = {
             "Tables": this.state.content
         };
-        this.props.saveDataTable(data);
+        this.props.saveDataTable(data,this.props.reference);
     }
     getTables() {
         return this.state.list;
@@ -39,14 +39,14 @@ componentDidUpdate(prevProps, prevState, snapshot) {
             "Tables": this.state.content
         };
         console.log("hoto life")
-        this.props.saveDataTable(data);
+        this.props.saveDataTable(data,this.props.reference);
     }
 
     append() {
         let tables = this.state.list;
         let dataList = this.state.list;
         let k = tables.length - 1
-        tables.push({"table": <Table savedata={()=>this.saveParentData}/>, "number": k});
+        tables.push({"table": <Table key = {k} savedata={this.saveParentData}/>, "number": k});
         dataList.push("")
         this.setState({
             list: tables,
@@ -67,7 +67,7 @@ componentDidUpdate(prevProps, prevState, snapshot) {
         let data = {
             "Tables": this.state.content
         };
-        this.props.saveDataTable(data);
+        this.props.saveDataTable(data,this.props.reference);
         console.log("boonkgang")
     }
 
