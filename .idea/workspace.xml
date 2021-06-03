@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Can now lift state up with data.">
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Can now correctly lift table states. TableElements not correctly formatted.">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeftSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeftSelector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TableHolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableHolder.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +156,8 @@
       <workItem from="1622166633419" duration="6567000" />
       <workItem from="1622214716442" duration="2624000" />
       <workItem from="1622232366009" duration="1679000" />
-      <workItem from="1622676938146" duration="5889000" />
+      <workItem from="1622676938146" duration="7753000" />
+      <workItem from="1622736461318" duration="5936000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -315,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622169800672</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Can now correctly lift table states. TableElements not correctly formatted.">
+      <created>1622683383830</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1622683383830</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +362,8 @@
     <MESSAGE value="Can now uplift state to form a JSON. Does not properly, work. The table data is not filled." />
     <MESSAGE value="Can now send BottomRightTable information up a state, but it doesn't continuously update." />
     <MESSAGE value="Can now lift state up with data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Can now lift state up with data." />
+    <MESSAGE value="Can now correctly lift table states. TableElements not correctly formatted." />
+    <option name="LAST_COMMIT_MESSAGE" value="Can now correctly lift table states. TableElements not correctly formatted." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
