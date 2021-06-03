@@ -6,53 +6,45 @@ class TableHolder extends React.Component {
         super(props);
         this.state = {
             list: [],
-            content: []
+            content: {}
         }
+
         this.append = this.append.bind(this);
         this.pop = this.pop.bind(this);
         this.saveParentData = this.saveParentData.bind(this);
     }
-componentDidUpdate(prevProps, prevState, snapshot) {
-    let data = {
-        "Tables": this.state.content
-    };
-    this.props.saveDataTable(data,this.props.reference);
-}
 
-    componentWillUnmount() {
-        let data = {
-            "Tables": this.state.content
-        };
-        this.props.saveDataTable(data,this.props.reference);
-    }
     getTables() {
         return this.state.list;
     }
 
-    saveParentData(id, tableData) {
+    saveParentData(id, Data) {
         let list = this.state.content;
-        list[id] = tableData
+        let label = "Table-"+String(id);
+        list[label] = {Data:Data};
         this.setState({
             content: list
-        })
+        });
         let data = {
-            "Tables": this.state.content
+            "Tables": list
         };
-        console.log("hoto life")
-        this.props.saveDataTable(data,this.props.reference);
+        console.log("hoto life");
+        console.log(list);
+        this.props.saveDataTable(data, this.props.reference);
     }
 
     append() {
         let tables = this.state.list;
-        let dataList = this.state.list;
-        let k = tables.length - 1
-        tables.push({"table": <Table key = {k} savedata={this.saveParentData}/>, "number": k});
-        dataList.push("")
+        let dataList = this.state.content;
+        let k = tables.length
+        tables.push({"table": <Table tableKey={k} savedata={this.saveParentData}/>, "number": k});
+        dataList[k] = "";
         this.setState({
             list: tables,
             content: dataList,
         });
         console.log("appending to holder" + this.state.list.length);
+        console.log(k);
         this.reKey();
     }
 
@@ -67,7 +59,8 @@ componentDidUpdate(prevProps, prevState, snapshot) {
         let data = {
             "Tables": this.state.content
         };
-        this.props.saveDataTable(data,this.props.reference);
+        this.props.saveDataTable(data, this.props.reference);
+        console.log(data)
         console.log("boonkgang")
     }
 

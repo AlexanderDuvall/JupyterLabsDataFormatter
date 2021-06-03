@@ -15,9 +15,9 @@ export class BottomRightTable extends React.Component {
             bottomRightTable: <TableHolder reference={this} saveDataTable={() => this.saveBottomRightTable}/>,
             bottomLeftTable: <TableHolder reference={this} saveDataTable={this.saveBottomLeftTable}/>,
             contents: {
-                "BottomLeft": "",
-                "BottomRight": "",
-                "RightTable": ""
+                "BottomLeft": {},
+                "BottomRight": {},
+                "RightTable": {}
             }
         };
         this.setupImageArray = this.setupImageArray.bind(this);

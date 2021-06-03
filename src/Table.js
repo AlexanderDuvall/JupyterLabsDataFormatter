@@ -17,17 +17,19 @@ class Table extends React.Component {
         this.tableOptions("Host");
     }
 
+//TODO Save JSON to file. Any extension
 
     renderTable() {
-        let data = {
-            "Table": {
+        let label = "Table"
+        let data = {};
+        data[label] = {
                 "type": this.state.type,
                 "columns": this.state.columns,
                 "tableElements": this.state.tableElements
-            }
         }
-        this.props.savedata(this.props.number, data)
-        console.log("slinning")
+        this.props.savedata(this.props.tableKey, data);
+        console.log("slinning");
+        console.log(data);
         return <table className="tableSpacing">
             <thead>
             <tr>
@@ -52,26 +54,16 @@ class Table extends React.Component {
     }
 
     componentWillUnmount() {
-        let data = {
-            "Table": {
+        let label = "Table"
+        let data = {};
+        data[label] = {
                 "type": this.state.type,
                 "columns": this.state.columns,
                 "tableElements": this.state.tableElements
             }
-        }
-        this.props.savedata(this.props.number, data)
+        this.props.savedata(this.props.tableKey, data)
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        let data = {
-            "Table": {
-                "type": this.state.type,
-                "columns": this.state.columns,
-                "tableElements": this.state.tableElements
-            }
-        }
-        this.props.savedata(this.props.number, data)
-    }
     append(e) {
         let a = this.state.columns;
         if (a.length !== 4) {

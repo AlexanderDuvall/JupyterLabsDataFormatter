@@ -16,8 +16,11 @@ class LeftSelector extends React.Component {
         this.saveParentDataFunction = this.saveParentDataFunction.bind(this);
     }
 
-//TODO They will have a pool to choose from data btw. So make drop down boxes include that
+// TODO They will have a pool to choose from data btw. So make drop down boxes include that
 // TODO Everything will be given from db;
+// TODO Add tableholderDATA to template
+// TODO Add list of templates
+//
     saveParentDataFunction(id, data) {
         let updatedTemplate = this.state.templates
         data["identifier"] = id;
@@ -25,7 +28,9 @@ class LeftSelector extends React.Component {
         this.setState({
             templates: updatedTemplate
         });
-        console.log("uptop...." + id + "...." + JSON.stringify(data, null, 4));
+        console.dir("uptop...." + id + "....");
+
+        console.log(JSON.stringify(data, null, 4))
     }
 
     goToView(identifier) {
@@ -70,7 +75,7 @@ class LeftSelector extends React.Component {
             templates: templates
         })
         this.renderViews();
-       // this.saveAll()
+        // this.saveAll()
 
     }
 
