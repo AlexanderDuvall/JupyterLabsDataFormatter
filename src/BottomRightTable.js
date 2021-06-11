@@ -14,6 +14,7 @@ export class BottomRightTable extends React.Component {
             rightTable: <TableHolder reference={this} saveDataTable={() => this.saveRightTable}/>,
             bottomRightTable: <TableHolder reference={this} saveDataTable={() => this.saveBottomRightTable}/>,
             bottomLeftTable: <TableHolder reference={this} saveDataTable={this.saveBottomLeftTable}/>,
+            problemStatement:"",
             contents: {
                 "BottomLeft": {},
                 "BottomRight": {},
@@ -26,12 +27,18 @@ export class BottomRightTable extends React.Component {
         this.saveRightTable = this.saveRightTable.bind(this);
         this.saveBottomRightTable = this.saveBottomRightTable.bind(this);
         this.saveBottomLeftTable = this.saveBottomLeftTable.bind(this);
+        this.onTitleChange = this.onTitleChange.bind(this);
+        this.onProbStatementChange = this.onProbStatementChange.bind(this);
     }
 
     saveBottomLeftTable(data, reference) {
         let update = reference.state.contents;
         console.log("111111")
+        data["imageformat"] = reference.state.currentImage;
+        data["Problem Title"] = reference.state.title
+        data["Problem Statement"] = reference.state.problemStatement
         update["BottomLeft"] = data
+        console.log(data)
         reference.setState({
             contents: update
         })
@@ -94,7 +101,7 @@ export class BottomRightTable extends React.Component {
 
     onProbStatementChange(event) {
         this.setState({
-            title: event.target.value
+            problemStatement: event.target.value
         })
     }
 
@@ -173,7 +180,7 @@ export class BottomRightTable extends React.Component {
                         <label className={"labelClass"}>Problem Statement</label>
                         <input type={"text"} name={"problemStatement"} className={"inputBoxLong"}
                                placeholder={"Problem Statement"} onChange={this.onProbStatementChange}
-                               value={this.state.probStatement}/>
+                               />
                     </div>
                 </div>
             </React.Fragment>

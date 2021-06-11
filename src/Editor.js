@@ -18,30 +18,6 @@ export class Editor extends React.Component {
         this.saveParentDataFunction = this.saveParentDataFunction.bind(this);
     }
 
-    getTemplate() {
-        return this.state.template;
-    }
-
-    componentDidMount() {
-        let data = this.props.data;
-        console.log(data.identifier + ".........")
-    }
-
-    componentWillUnmount() {
-        let id = this.props.data.identifier;
-        let hash = this.buildhash();
-        console.log(hash);
-        this.props.saveFinalData(id, hash);
-    }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        let id = this.props.data.identifier;
-        let hash = this.buildhash();
-        console.log(hash);
-        this.props.saveFinalData(id, hash);
-        console.log("updating!!! " + id + "...." + this.state.template.type.name);
-    }
-
     selectTemplateType(event) {
         let a = event.target.value;
         if (a === "BottomRightTable") {
@@ -76,8 +52,7 @@ export class Editor extends React.Component {
 
     buildhash() {
         let data = {
-            template: this.state.template,
-            tableHolderData: this.state.tableHolderData
+            templatedata: this.state.tableHolderData
         };
         console.log(data);
         console.log("mhmmm")

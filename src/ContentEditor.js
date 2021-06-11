@@ -70,7 +70,6 @@ class ContentEditor extends React.Component {
 
 //TODO, add what solution types are available in solution. So only a select few options are available.
 //TODO, account for variability in practice.
-    //TODO Add option for what format to show topology (dot, neato...)
 
 
     render() {

@@ -1,5 +1,4 @@
 import React from "react";
-//TODO above image add image options with things like show graph... Add renderer, change image etc.
 //TODO Save to JSON file or just a file
 //Add Tabs to solution set
 
@@ -10,22 +9,31 @@ class Table extends React.Component {
         this.pop = this.pop.bind(this);
         this.changeSelection = this.changeSelection.bind(this);
         this.updateColumnSelection = this.updateColumnSelection.bind(this);
+        this.onTitleChange = this.onTitleChange.bind(this);
         this.state = {
             type: "",
             columns: [1],
             tableElements: "-",
-            columnData: {1: "-"}
+            columnData: {1: "-"},
+            title: ""
         }
         this.tableOptions("Host");
     }
 
 //TODO Save JSON to file. Any extension
+    onTitleChange(e) {
+        let t = e.target.value;
+        this.setState({
+            title:t
+        });
+    }
 
     renderTable() {
         let label = "Table"
         let data = {};
         data[label] = {
             "type": this.state.type,
+            "title":this.state.title,
             "columns": this.state.columns.length,
             "tableElements": this.state.columnData
         }
@@ -42,7 +50,6 @@ class Table extends React.Component {
             {this.renderRows(this.state.columns.length)}
             </tbody>
         </table>
-
     }
 
     changeSelection(e) {
@@ -97,39 +104,39 @@ class Table extends React.Component {
         switch (type) {
             case "Bridge":
                 return <select className={"headerSelector"} onChange={(e) => this.updateColumnSelection(e, i)}>
-                    <option value={"None"}>-</option>
-                    <option value={"IP Address"}>1IP Address</option>
-                    <option value={"MAC Address"}>MAC Address</option>
-                    <option value={"VLAN"}>VLAN</option>
-                    <option value={"Router"}>Router</option>
-                    <option value={"Gateway"}>Gateway</option>
+                    <option value={"none"}>-</option>
+                    <option value={"ip_address"}>3IP Address</option>
+                    <option value={"mac_address"}>MAC Address</option>
+                    <option value={"vlan"}>VLAN</option>
+                    <option value={"router"}>Router</option>
+                    <option value={"gateway"}>Gateway</option>
                 </select>
             case "Host":
-                return <select className={"headerSelector"} onChange={(e) => this.updateColumnSelection(e, i )}>
-                    <option value={"None"}>-</option>
-                    <option value={"IP Address"}>2IP Address</option>
-                    <option value={"MAC Address"}>MAC Address</option>
-                    <option value={"VLAN"}>VLAN</option>
-                    <option value={"Router"}>Router</option>
-                    <option value={"Gateway"}>Gateway</option>
+                return <select className={"headerSelector"} onChange={(e) => this.updateColumnSelection(e, i)}>
+                    <option value={"none"}>-</option>
+                    <option value={"ip_address"}>3IP Address</option>
+                    <option value={"mac_address"}>MAC Address</option>
+                    <option value={"vlan"}>VLAN</option>
+                    <option value={"router"}>Router</option>
+                    <option value={"gateway"}>Gateway</option>
                 </select>
             case "Router":
-                return <select className={"headerSelector"} onChange={(e) => this.updateColumnSelection(e, i  )}>
-                    <option value={"None"}>-</option>
-                    <option value={"IP Address"}>3IP Address</option>
-                    <option value={"MAC Address"}>MAC Address</option>
-                    <option value={"VLAN"}>VLAN</option>
-                    <option value={"Router"}>Router</option>
-                    <option value={"Gateway"}>Gateway</option>
+                return <select className={"headerSelector"} onChange={(e) => this.updateColumnSelection(e, i)}>
+                    <option value={"none"}>-</option>
+                    <option value={"ip_address"}>3IP Address</option>
+                    <option value={"mac_address"}>MAC Address</option>
+                    <option value={"vlan"}>VLAN</option>
+                    <option value={"router"}>Router</option>
+                    <option value={"gateway"}>Gateway</option>
                 </select>
             case "Gateway":
-                return <select className={"headerSelector"} onChange={(e) => this.updateColumnSelection(e, i  )}>
-                    <option value={"None"}>-</option>
-                    <option value={"IP Address"}>4IP Address</option>
-                    <option value={"MAC Address"}>MAC Address</option>
-                    <option value={"VLAN"}>VLAN</option>
-                    <option value={"Router"}>Router</option>
-                    <option value={"Gateway"}>Gateway</option>
+                return <select className={"headerSelector"} onChange={(e) => this.updateColumnSelection(e, i)}>
+                    <option value={"none"}>-</option>
+                    <option value={"ip_address"}>3IP Address</option>
+                    <option value={"mac_address"}>MAC Address</option>
+                    <option value={"vlan"}>VLAN</option>
+                    <option value={"router"}>Router</option>
+                    <option value={"gateway"}>Gateway</option>
                 </select>
             default:
                 return "-"
@@ -141,7 +148,7 @@ class Table extends React.Component {
         let type = this.state.type;
         let r = [<th scope="col">{this.tableOptions(type, 1)} </th>];
         for (let i = 1; i < rows; i++) {
-            r.push(<th scope="col">{this.tableOptions(type, i+1 )} </th>);
+            r.push(<th scope="col">{this.tableOptions(type, i + 1)} </th>);
         }
         return r;
     }
@@ -177,7 +184,7 @@ class Table extends React.Component {
                             <option value={"Gateway"}>Gateway</option>
                         </select>
                         <input type={"text"} name={"problemStatement"} className={"tableInputBox"}
-                               placeholder={"Table Title"}/>
+                               placeholder={"Table Title"} onChange={this.onTitleChange}/>
                     </div>
                     <div className="appendBar">
                         <div className="blocked">

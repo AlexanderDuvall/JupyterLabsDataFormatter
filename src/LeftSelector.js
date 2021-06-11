@@ -7,34 +7,46 @@ class LeftSelector extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            templates: [],
-            templateId: []
+            templates: {},
+            templateId: [],
+            saveData: ""
         }
         this.goToView = this.goToView.bind(this);
         this.addTemplate = this.addTemplate.bind(this);
         this.goToView = this.goToView.bind(this);
         this.saveParentDataFunction = this.saveParentDataFunction.bind(this);
+        this.SaveToFile = this.SaveToFile.bind(this);
     }
 
 // TODO They will have a pool to choose from data btw. So make drop down boxes include that
 // TODO Everything will be given from db;
-// TODO Add tableholderDATA to template
 // TODO Add list of templates
 //
     saveParentDataFunction(id, data) {
         let updatedTemplate = this.state.templates
-        data["identifier"] = id;
         updatedTemplate[id - 1] = <Editor saveFinalData={this.saveParentDataFunction} data={data}/>
         this.setState({
             templates: updatedTemplate
         });
         console.dir("uptop...." + id + "....");
-
+        let finalData = JSON.stringify(data, null, 4);
+        this.setState({
+            saveData:finalData
+        })
         console.log(JSON.stringify(data, null, 4))
     }
 
+    SaveToFile(event) {
+        const element = document.createElement("a");
+        const file = new Blob([this.state.saveData], {type: 'text/plain'});
+        element.href = URL.createObjectURL(file);
+        element.download = "test.json";
+        document.body.appendChild(element); // Required for this to work in FireFox
+        element.click();
+    }
+
     goToView(identifier) {
-        let template = this.state.templates[identifier - 1];
+        let template = this.state.templates[identifier];
         console.log("rendering " + identifier);
         ReactDOM.render(template, document.getElementById("right"));
     }
@@ -69,59 +81,14 @@ class LeftSelector extends React.Component {
         }
         console.log("sending KEY: " + len);
         console.log(buttons);
-        templates.push(<Editor saveFinalData={this.saveParentDataFunction} data={data}/>)
+        templates[len] = <Editor saveFinalData={this.saveParentDataFunction} data={data}/>
         this.setState({
             templateId: buttons,
             templates: templates
         })
         this.renderViews();
-        // this.saveAll()
-
     }
-
-    saveAll() {
-        let templates = this.state.templates;
-        let body = {};
-        for (let i = 0; i < templates.length; templates++) {
-            let t = templates[i];
-            let tableFormat = t.state.template;
-            let editor = tableFormat.getTemplate();
-            let tableHolders = editor.getTableHolders();
-            let bottomLeftTables = tableHolders.bottomLeftTable.getTables();
-            let bottomRightTables = tableHolders.bottomRightTable.getTables();
-            let rightTables = tableHolders.rightTable.getTables();
-            let brt = {};
-            let rt = {};
-            let blt = {};
-            for (let i = 0; i < bottomLeftTables.length; i++) {
-                let table = bottomLeftTables[i];
-                let preset = table.state.tableElements;
-                let columnCount = table.state.columns.length;
-                blt.push({"present": preset, "columnCount": columnCount, "name": "TO_BE_ADDED"})
-            }
-            for (let i = 0; i < bottomRightTables.length; i++) {
-                let table = bottomLeftTables[i];
-                let preset = table.state.tableElements;
-                let columnCount = table.state.columns.length;
-                brt.push({"present": preset, "columnCount": columnCount, "name": "TO_BE_ADDED"})
-            }
-            for (let i = 0; i < rightTables.length; i++) {
-                let table = bottomLeftTables[i];
-                let preset = table.state.tableElements;
-                let columnCount = table.state.columns.length;
-                rt.push({"present": preset, "columnCount": columnCount, "name": "TO_BE_ADDED"})
-            }
-            body.push({
-                "template": tableFormat, "Tables": {
-                    "BottomRightTables": brt,
-                    "BottomLeftTables": blt,
-                    "RightTable": rt
-                }
-            })
-        }
-
-    }
-
+//TODO add template title to list
     render() {
         return (
             <React.Fragment>
@@ -130,6 +97,11 @@ class LeftSelector extends React.Component {
                            onChange={this.onTitleChange} value={this.state.title}/>
                     <button className={"appendButton"} onClick={this.addTemplate}>
                         <h5>+</h5>
+                    </button>
+                </div>
+                <div>
+                    <button className={"problemButton"} onClick={this.SaveToFile}>
+                        Save
                     </button>
                 </div>
                 {this.renderViews()}
