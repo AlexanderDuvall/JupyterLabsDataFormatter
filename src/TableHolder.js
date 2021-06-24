@@ -17,7 +17,8 @@ class TableHolder extends React.Component {
     getTables() {
         return this.state.list;
     }
-
+    //TODO why is key "id" :"" there ? Fix that
+    //KEY TABLE ADD
     saveParentData(id, Data) {
         let list = this.state.content;
         let label = "Table-"+String(id);
@@ -28,6 +29,7 @@ class TableHolder extends React.Component {
         let data = {
             "Tables": list
         };
+
         console.log("hoto life");
         console.log(list);
         this.props.saveDataTable(data, this.props.reference);

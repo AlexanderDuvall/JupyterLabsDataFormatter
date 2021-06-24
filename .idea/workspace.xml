@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Can now lift up table column data: type,length,data elements.">
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Able to save data to a json file. Added Problem statement, title, and image type to json file.">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContentEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContentEditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LeftSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeftSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TableHolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableHolder.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +160,8 @@
       <workItem from="1622736461318" duration="7453000" />
       <workItem from="1622750941864" duration="6202000" />
       <workItem from="1622837824574" duration="1301000" />
-      <workItem from="1623376056238" duration="4022000" />
+      <workItem from="1623376056238" duration="4190000" />
+      <workItem from="1623441559962" duration="1629000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -334,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622742860213</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Able to save data to a json file. Added Problem statement, title, and image type to json file.">
+      <created>1623380243932</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1623380243932</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,7 +369,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit. Begun adding templates. None finished." />
     <MESSAGE value="Table and image set for RightTable.js format. BottomTable.js started." />
     <MESSAGE value="BottomTable.js, BottomRightTable.js, and RightTable.js Correctly formatted." />
     <MESSAGE value="Added pop function on columns, can now add templates with LeftSelector.js, can select which template to use with dropdown menu." />
@@ -390,7 +393,8 @@
     <MESSAGE value="Can now lift state up with data." />
     <MESSAGE value="Can now correctly lift table states. TableElements not correctly formatted." />
     <MESSAGE value="Can now lift up table column data: type,length,data elements." />
-    <option name="LAST_COMMIT_MESSAGE" value="Can now lift up table column data: type,length,data elements." />
+    <MESSAGE value="Able to save data to a json file. Added Problem statement, title, and image type to json file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Able to save data to a json file. Added Problem statement, title, and image type to json file." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
