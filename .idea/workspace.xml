@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Able to save data to a json file. Added Problem statement, title, and image type to json file.">
+    <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added Key data to lift up state. Current rendering bug in key modal. Implemented unsaved method in KeyTable.js">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TableHolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableHolder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KeyTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/KeyTable.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +45,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.17.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.16.3" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.20.15" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.path.for.package.eslint" value="$APPLICATION_CONFIG_DIR$/node/node-v14.15.0-win-x64/node" />
+    <property name="node.js.path.for.package.eslint" value="node" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
@@ -78,11 +80,15 @@
       <scripts>
         <script value="start" />
       </scripts>
-      <node-interpreter value="$APPLICATION_CONFIG_DIR$/node/node-v14.15.0-win-x64/node" />
+      <node-interpreter value="node" />
       <package-manager value="npm" />
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="npm.npm start" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -162,6 +168,10 @@
       <workItem from="1622837824574" duration="1301000" />
       <workItem from="1623376056238" duration="4190000" />
       <workItem from="1623441559962" duration="1629000" />
+      <workItem from="1624561033890" duration="58000" />
+      <workItem from="1624561107512" duration="816000" />
+      <workItem from="1624561945490" duration="5263000" />
+      <workItem from="1625076789013" duration="7302000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -352,10 +362,10 @@
             <State>
               <option name="FILTERS">
                 <map>
-                  <entry key="text">
+                  <entry key="branch">
                     <value>
                       <list>
-                        <option value="template" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -369,7 +379,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Table and image set for RightTable.js format. BottomTable.js started." />
     <MESSAGE value="BottomTable.js, BottomRightTable.js, and RightTable.js Correctly formatted." />
     <MESSAGE value="Added pop function on columns, can now add templates with LeftSelector.js, can select which template to use with dropdown menu." />
     <MESSAGE value="Added save function when moving to different templates. Does not update, just stores info in states." />
@@ -394,7 +403,8 @@
     <MESSAGE value="Can now correctly lift table states. TableElements not correctly formatted." />
     <MESSAGE value="Can now lift up table column data: type,length,data elements." />
     <MESSAGE value="Able to save data to a json file. Added Problem statement, title, and image type to json file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Able to save data to a json file. Added Problem statement, title, and image type to json file." />
+    <MESSAGE value="Added Key data to lift up state. Current rendering bug in key modal. Implemented unsaved method in KeyTable.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Key data to lift up state. Current rendering bug in key modal. Implemented unsaved method in KeyTable.js" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

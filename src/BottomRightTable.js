@@ -6,21 +6,7 @@ import TableHolder from "./TableHolder";
 export class BottomRightTable extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            imageFormats: ["default-neato.png", "default-circo.png", "stp-dot.png", "stp-circo-nohost.png", "stp-dot-nohost.png", "stp-neato-nohost.png"],
-            showImage: true,
-            currentImage: "default-neato.png",
-            select: "",
-            rightTable: <TableHolder reference={this} saveDataTable={() => this.saveRightTable}/>,
-            bottomRightTable: <TableHolder reference={this} saveDataTable={() => this.saveBottomRightTable}/>,
-            bottomLeftTable: <TableHolder reference={this} saveDataTable={this.saveBottomLeftTable}/>,
-            problemStatement:"",
-            contents: {
-                "BottomLeft": {},
-                "BottomRight": {},
-                "RightTable": {}
-            }
-        };
+
         this.setupImageArray = this.setupImageArray.bind(this);
         this.showImageHandler = this.showImageHandler.bind(this);
         this.changeImage = this.changeImage.bind(this);
@@ -29,6 +15,22 @@ export class BottomRightTable extends React.Component {
         this.saveBottomLeftTable = this.saveBottomLeftTable.bind(this);
         this.onTitleChange = this.onTitleChange.bind(this);
         this.onProbStatementChange = this.onProbStatementChange.bind(this);
+        this.state = {
+            imageFormats: ["default-neato.png", "default-circo.png", "stp-dot.png", "stp-circo-nohost.png", "stp-dot-nohost.png", "stp-neato-nohost.png"],
+            showImage: true,
+            currentImage: "default-neato.png",
+            select: "",
+            rightTable: <TableHolder reference={this} saveDataTable={() => this.saveRightTable}/>,
+            bottomRightTable: <TableHolder reference={this} saveDataTable={() => this.saveBottomRightTable}/>,
+            bottomLeftTable: <TableHolder reference={this} saveDataTable={this.saveBottomLeftTable}/>,
+            problemStatement: "",
+            contents: {
+                "BottomLeft": {},
+                "BottomRight": {},
+                "RightTable": {},
+                "KeyData": {}
+            }
+        };
     }
 
     saveBottomLeftTable(data, reference) {
@@ -53,6 +55,16 @@ export class BottomRightTable extends React.Component {
             contents: update
         })
         reference.props.saveData(reference.state.contents)
+    }
+
+    saveKeyData(data) {
+        let update = this.state.contents;
+        console.log("111111")
+        update["KeyData"] = data
+        this.setState({
+            contents: update
+        })
+        this.props.saveData(this.state.contents)
     }
 
     saveRightTable(data, reference) {
@@ -175,12 +187,12 @@ export class BottomRightTable extends React.Component {
                             {this.state.bottomRightTable}
                         </div>
                     </div>
-                    <KeyTable/>
+                    <KeyTable saveKeyData={() => this.saveKeyData}/>
                     <div className={"centerInput"}>
                         <label className={"labelClass"}>Problem Statement</label>
                         <input type={"text"} name={"problemStatement"} className={"inputBoxLong"}
                                placeholder={"Problem Statement"} onChange={this.onProbStatementChange}
-                               />
+                        />
                     </div>
                 </div>
             </React.Fragment>
