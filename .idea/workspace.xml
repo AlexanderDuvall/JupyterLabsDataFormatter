@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="165448b1-2d1b-47cf-a47c-e64677b1513e" name="Default Changelist" comment="Added Key data to lift up state. Current rendering bug in key modal. Implemented unsaved method in KeyTable.js">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BottomRightTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BottomRightTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/KeyTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/KeyTable.js" afterDir="false" />
@@ -171,7 +170,8 @@
       <workItem from="1624561033890" duration="58000" />
       <workItem from="1624561107512" duration="816000" />
       <workItem from="1624561945490" duration="5263000" />
-      <workItem from="1625076789013" duration="7302000" />
+      <workItem from="1625076789013" duration="7381000" />
+      <workItem from="1625086852025" duration="1952000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit. Begun adding templates. None finished.">
       <created>1610130684677</created>
@@ -348,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623380243932</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Added Key data to lift up state. Current rendering bug in key modal. Implemented unsaved method in KeyTable.js">
+      <created>1625084172166</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1625084172166</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -51,6 +51,7 @@ class KeyTable extends React.Component {
         let variables = this.state.tableValues;
         variables.splice(index, 1)
         this.constructTable();
+        this.save();
     }
 
     addRow() {
@@ -66,6 +67,7 @@ class KeyTable extends React.Component {
             title: titles
         })
         this.constructTable();
+        this.save()
     }
 
     getKeysFromDB() {
@@ -84,7 +86,9 @@ class KeyTable extends React.Component {
         });
         this.constructTable();
         // this.constructDropdown(this.state.tableValues[index])
+        this.save()
     }
+
 
     save() {
         let list = this.state.title;
@@ -93,14 +97,11 @@ class KeyTable extends React.Component {
         let identifiers = this.state.tableValues
         for (let i = 0; i < list.length; i++) {
             let s = modalKeys[i];
-            data[list[i]] = {KeyData:s,Identifier:identifiers[i]};
+            data[list[i]] = {KeyData: s, Identifier: identifiers[i]};
         }
-        this.props.saveKeyData({
-            "ModalKey": this.state.modalKeys,
-            "Name": this.state.title,
-            "Identifiers": this.state.tableValues
-        })
-
+        console.log(data);
+        this.props.saveKeyData(data, this.props.reference);
+        console.log("tuttie frutie");
     }
 
     constructOptions(i) {
@@ -129,6 +130,7 @@ class KeyTable extends React.Component {
         this.setState({
             modalKeys: list
         });
+        this.save();
     }
 
 //TODO Fix UI bug where keys don't update
@@ -206,6 +208,7 @@ class KeyTable extends React.Component {
         this.setState({
             title: list
         });
+        this.save();
     }
 
     constructTable() {

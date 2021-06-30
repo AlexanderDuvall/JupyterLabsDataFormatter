@@ -15,6 +15,7 @@ export class BottomRightTable extends React.Component {
         this.saveBottomLeftTable = this.saveBottomLeftTable.bind(this);
         this.onTitleChange = this.onTitleChange.bind(this);
         this.onProbStatementChange = this.onProbStatementChange.bind(this);
+        this.saveKeyData = this.saveKeyData.bind(this);
         this.state = {
             imageFormats: ["default-neato.png", "default-circo.png", "stp-dot.png", "stp-circo-nohost.png", "stp-dot-nohost.png", "stp-neato-nohost.png"],
             showImage: true,
@@ -57,14 +58,15 @@ export class BottomRightTable extends React.Component {
         reference.props.saveData(reference.state.contents)
     }
 
-    saveKeyData(data) {
-        let update = this.state.contents;
-        console.log("111111")
+    saveKeyData(data,reference) {
+        let update = reference.state.contents;
+        console.log("222222");
         update["KeyData"] = data
-        this.setState({
+        reference.setState({
             contents: update
         })
-        this.props.saveData(this.state.contents)
+        reference.props.saveData(reference.state.contents)
+        console.log(reference.state.contents);
     }
 
     saveRightTable(data, reference) {
@@ -187,7 +189,7 @@ export class BottomRightTable extends React.Component {
                             {this.state.bottomRightTable}
                         </div>
                     </div>
-                    <KeyTable saveKeyData={() => this.saveKeyData}/>
+                    <KeyTable saveKeyData={this.saveKeyData} reference={this}/>
                     <div className={"centerInput"}>
                         <label className={"labelClass"}>Problem Statement</label>
                         <input type={"text"} name={"problemStatement"} className={"inputBoxLong"}
