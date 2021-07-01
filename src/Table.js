@@ -1,5 +1,4 @@
 import React from "react";
-//TODO Save to JSON file or just a file
 //Add Tabs to solution set
 
 class Table extends React.Component {

@@ -21,8 +21,8 @@ export class BottomRightTable extends React.Component {
             showImage: true,
             currentImage: "default-neato.png",
             select: "",
-            rightTable: <TableHolder reference={this} saveDataTable={() => this.saveRightTable}/>,
-            bottomRightTable: <TableHolder reference={this} saveDataTable={() => this.saveBottomRightTable}/>,
+            rightTable: <TableHolder reference={this} saveDataTable={ this.saveRightTable}/>,
+            bottomRightTable: <TableHolder reference={this} saveDataTable={ this.saveBottomRightTable}/>,
             bottomLeftTable: <TableHolder reference={this} saveDataTable={this.saveBottomLeftTable}/>,
             problemStatement: "",
             contents: {
@@ -38,8 +38,9 @@ export class BottomRightTable extends React.Component {
         let update = reference.state.contents;
         console.log("111111")
         data["imageformat"] = reference.state.currentImage;
-        data["Problem Title"] = reference.state.title
-        data["Problem Statement"] = reference.state.problemStatement
+        data["showImage"] = reference.state.showImage;
+        data["Problem Title"] = reference.state.title;
+        data["Problem Statement"] = reference.state.problemStatement;
         update["BottomLeft"] = data
         console.log(data)
         reference.setState({
@@ -67,6 +68,7 @@ export class BottomRightTable extends React.Component {
         })
         reference.props.saveData(reference.state.contents)
         console.log(reference.state.contents);
+
     }
 
     saveRightTable(data, reference) {

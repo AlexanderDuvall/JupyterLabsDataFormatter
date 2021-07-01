@@ -35,7 +35,7 @@ class KeyTable extends React.Component {
         return (
             <Modal show={this.state.showModal} onHide={() => this.hideModal()}>
                 <Modal.Header closeButton>
-                    <Modal.Title>{this.state.title}</Modal.Title>
+                    <Modal.Title>Select Options</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>{this.state.body}</Modal.Body>
                 <Modal.Footer>
@@ -101,7 +101,6 @@ class KeyTable extends React.Component {
         }
         console.log(data);
         this.props.saveKeyData(data, this.props.reference);
-        console.log("tuttie frutie");
     }
 
     constructOptions(i) {
@@ -126,11 +125,12 @@ class KeyTable extends React.Component {
         }
 
         console.log("toggled:" + e.target.checked);
-        console.log("toggled:" + (list[index][key] == e.target.checked));
         this.setState({
             modalKeys: list
         });
-        this.save();
+        console.log(list)
+
+        //this.save();
     }
 
 //TODO Fix UI bug where keys don't update
@@ -138,13 +138,12 @@ class KeyTable extends React.Component {
         let list = this.state.modalKeys[i];
         let items = [];
         console.log("index...." + i);
-
         let innerData = (index, key) => {
             let e = <label className="container" key={key}>
                 <h4 className={"customCheckmarkLabel"}>{key}</h4>
-                <input type="checkbox" checked={this.state.modalKeys[i][key]}
-                       onChange={(e) => reference.onToggle(e, i, key)}/>
-                <span className="checkmark"></span>
+                <input key={key} type="checkbox" checked={this.state.modalKeys[i][key]}
+                       onChange={(e) => this.onToggle(e, i, key)}/>
+                <span checked={this.state.modalKeys[i][key]} className="checkmark"></span>
             </label>
             return e;
         }
@@ -164,8 +163,7 @@ class KeyTable extends React.Component {
             {
                 showModal: true,
                 body: body,
-                title: ""
-            }
+             }
         );
     }
 
@@ -204,6 +202,8 @@ class KeyTable extends React.Component {
     changeInput(e, i) {
         let value = e.target.value;
         let list = this.state.title;
+        console.log(list);
+        console.log("ffffasd")
         list[i] = value;
         this.setState({
             title: list
@@ -222,7 +222,7 @@ class KeyTable extends React.Component {
                     </button>
                 </td>
                 <td className={"tdFormat"} key={i + "child_1"}><input placeholder="Give variable a name"
-                                                                      onChange={(e) => this.changeInput(e, i)}
+                                                                      onInput={(e) => this.changeInput(e, i)}
                 /></td>
                 <td key={i + "child_2"}>{this.constructOptions(i)}</td>
                 <td key={i + "child_3"}>{variables[i]}</td>

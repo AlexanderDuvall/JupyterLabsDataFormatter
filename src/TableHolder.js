@@ -17,12 +17,15 @@ class TableHolder extends React.Component {
     getTables() {
         return this.state.list;
     }
+
     //TODO why is key "id" :"" there ? Fix that
     //KEY TABLE ADD
     saveParentData(id, Data) {
         let list = this.state.content;
-        let label = "Table-"+String(id);
-        list[label] = {Data:Data};
+        let label = "Table-" + String(id);
+
+        list[label] = {Data: Data};
+        delete list[String(id)]
         this.setState({
             content: list
         });
