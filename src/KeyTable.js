@@ -1,7 +1,9 @@
 import React from "react";
 import {Button, Modal} from "react-bootstrap";
 import {forEach} from "react-bootstrap/ElementChildren";
-
+/*
+Unrelated to problem SOlution
+ */
 class KeyTable extends React.Component {
     constructor(props) {
         super(props);
@@ -100,6 +102,7 @@ class KeyTable extends React.Component {
             data[list[i]] = {KeyData: s, Identifier: identifiers[i]};
         }
         console.log(data);
+        console.log("FUCKING WHORE")
         this.props.saveKeyData(data, this.props.reference);
     }
 
@@ -152,6 +155,7 @@ class KeyTable extends React.Component {
             let e = innerData(i, key);
             items.push(e);
         });
+        console.log(items);
         return items;
     }
 

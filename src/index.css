@@ -182,7 +182,11 @@ code {
     display: flex;
     padding-top: 15px;
 }
-
+.CheckboxList{
+    margin-top: 30px;
+    display: flex;
+    margin-left: 20px;
+}
 .graphicsSelector {
     margin-left: 20px;
     width: 100%;
@@ -195,9 +199,9 @@ code {
 .problemSelector {
     margin-left: 20px;
     width: 90%;
-    height: 100px;
+    height: 100%;
     display: flex;
-    padding-bottom: 101px;
+    padding-bottom: 30px;
 }
 
 .imageToggler {
@@ -401,4 +405,12 @@ th {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+.solutionList{
+    margin-left: 18px;
+    padding-right: 10px;
+}
+.solutionColumn{
+    width: 180px;
+    margin-left: 10px;
 }
