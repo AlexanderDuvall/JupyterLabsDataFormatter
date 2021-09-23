@@ -9,13 +9,67 @@ class ContentEditor extends React.Component {
             columnOptions: ["", ""],
             emptyArray: [0, 1],
             content: ["IP Address", "IP Address"],
-            template: "Table"
+            template: "Table",
+            options: null
         }
         this.append = this.append.bind(this);
         this.pop = this.pop.bind(this);
         this.saveContent = this.saveContent.bind(this);
         this.changeTemplate = this.changeTemplate.bind(this);
         this.onTabChanged = this.onTabChanged.bind(this);
+    }
+
+    buildActions() {
+        var json = [{
+            "action":
+                [
+                    {
+                        "vertex": "bridge",
+                        "actions":
+                            [
+                                {"name": "flood", "data": ["Ports"]},
+                                {"name": "forward", "data": ["VLAN"]},
+                                {"name": "send-packet", "data": ["Dest. MAC"]}
+                            ]
+                    },
+                    {
+                        "vertex": "host",
+                        "actions":
+                            [
+                                {"name": "arp-request", "data": ["Target IP"]},
+                                {"name": "arp-reply", "data": ["Source MAC"]},
+                                {"name": "dns-request", "data": ["Type", "Nameserver IP", "Value"]},
+                                {"name": "dns-response", "data": ["Type", "Value"]},
+                                {"name": "echo-request", "data": ["Dest. IP", "Dest. MAC"]},
+                                {"name": "echo-reply", "data": ["Dest. IP", "Dest. MAC"]},
+                                {"name": "send-packet", "data": ["Dest. MAC"]}
+                            ]
+                    }
+                ]
+        }];
+        let formedJson = {}
+        json.forEach((item) => {
+            let first = item.action.length;
+            for (let i = 0; i < first; i++) {
+                //document.write("-----------Vertex:"+item.action[i].vertex+"\n");
+                formedJson[item.action[i].vertex] = [];//addVertex Actions
+                let second = item.action[i].actions.length
+                for (let j = 0; j < second; j++) {
+                    let f = <div>
+                        <input type="checkbox" id="topping" key={i + ":" + j}
+                               value="Paneer"/>{item.action[i].actions[j]}
+                    </div>
+                    formedJson[item.action[i].vertex].push(f);
+                    console.log(item.action[i].vertex);
+                    //add vertex actions and data points
+                    //document.write("Name:"+item.action[i].actions[j].name+"\n");
+                }
+            }
+        });
+        this.setState({
+            options: formedJson
+        });
+        return formedJson;
     }
 
     componentWillUnmount() {
@@ -39,17 +93,14 @@ class ContentEditor extends React.Component {
     }
 
     onTabChanged(number, event) {
+        let formedJson = this.buildActions();
         let selection = event.target.value;
         let f = this.state.columnOptions;
-        console.log(f)
+        console.log(formedJson.bridge.toString());
+        console.log("===========");
         if (selection === "Bridge") {
             f[number] = <div className={"solutionList"}>
-                <div>
-                    <input type="checkbox" id="topping" name="topping" value="Paneer"/>forward
-                </div>
-                <div>
-                    <input type="checkbox" id="topping" name="topping" value="Paneer"/>flood
-                </div>
+                {formedJson.bridge}
             </div>;
         } else if (selection === "Router") {
             f[number] = <div className={"solutionList"}>
@@ -62,30 +113,11 @@ class ContentEditor extends React.Component {
                 <div>
                     <input type="checkbox" id="topping" name="topping" value="Paneer"/>arp request/reply
                 </div>
-
             </div>;
         } else if (selection === "Host") {
             f[number] =
                 <div className={"solutionList"}>
-                    <div>
-                        <input type="checkbox" id="topping" name="topping" value="Paneer"/>send-packet
-                    </div>
-                    <div>
-                        <input type="checkbox" id="topping" name="topping" value="Paneer"/>receive packet
-                    </div>
-                    <div>
-                        <input type="checkbox" id="topping" name="topping" value="Paneer"/>receive and ignore
-                    </div>
-                    <div>
-                        <input type="checkbox" id="topping" name="topping" value="Paneer"/>echo
-                    </div>
-                    <div>
-                        <input type="checkbox" id="topping" name="topping" value="Paneer"/>request/reply
-                    </div>
-                    <div>
-                        <input type="checkbox" id="topping" name="topping" value="Paneer"/>arp request/reply
-                    </div>
-
+                    {formedJson.host}
                 </div>;
         }
         this.setState({
