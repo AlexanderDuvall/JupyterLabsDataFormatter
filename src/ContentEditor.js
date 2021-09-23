@@ -49,6 +49,7 @@ class ContentEditor extends React.Component {
         }];
         let formedJson = {}
         json.forEach((item) => {
+            console.log("Building it all..." + item.action[0].vertex)
             let first = item.action.length;
             for (let i = 0; i < first; i++) {
                 //document.write("-----------Vertex:"+item.action[i].vertex+"\n");
@@ -57,10 +58,10 @@ class ContentEditor extends React.Component {
                 for (let j = 0; j < second; j++) {
                     let f = <div>
                         <input type="checkbox" id="topping" key={i + ":" + j}
-                               value="Paneer"/>{item.action[i].actions[j]}
+                               value="Paneer"/>{item.action[i].actions[j].name}
                     </div>
+                    console.log(item.action[i].actions[j].name);
                     formedJson[item.action[i].vertex].push(f);
-                    console.log(item.action[i].vertex);
                     //add vertex actions and data points
                     //document.write("Name:"+item.action[i].actions[j].name+"\n");
                 }
@@ -69,6 +70,7 @@ class ContentEditor extends React.Component {
         this.setState({
             options: formedJson
         });
+        console.log("ZZZZZZ: " + formedJson["host"])
         return formedJson;
     }
 
